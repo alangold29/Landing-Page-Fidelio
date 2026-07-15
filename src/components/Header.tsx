@@ -1,0 +1,9 @@
+import { useEffect, useState } from 'react'
+
+export function Header() {
+  const [pastHero, setPastHero] = useState(false)
+  const [hash, setHash] = useState(() => window.location.hash)
+  useEffect(() => { const onScroll = () => { const isHome = window.location.hash === '' || window.location.hash === '#home'; setPastHero(!isHome || window.scrollY > window.innerHeight - 80) }; const onHash = () => { setHash(window.location.hash); onScroll() }; addEventListener('scroll', onScroll, { passive: true }); addEventListener('hashchange', onHash); onScroll(); return () => { removeEventListener('scroll', onScroll); removeEventListener('hashchange', onHash) } }, [])
+  const active = (value: string) => hash === value ? (pastHero ? 'bg-black/10' : 'bg-white/10') : 'opacity-80 transition hover:opacity-100'
+  return <header className="fixed left-0 right-0 top-6 z-50 flex items-center justify-between px-8 md:px-12"><a href="#home" className={`font-display text-2xl font-medium tracking-[-.04em] ${pastHero ? 'text-foreground' : 'text-white'}`}>Fidelio<span className="text-[#9ae8af]">.</span></a><nav className={`flex items-center gap-1 rounded-full px-2 py-2 backdrop-blur-md ${pastHero ? 'bg-black/10 text-foreground' : 'bg-[var(--header-bg)] text-white'}`}><a href="#home" className={`rounded-full px-5 py-2 text-sm font-medium ${hash === '' || hash === '#home' ? (pastHero ? 'bg-black/10' : 'bg-white/10') : 'opacity-80 transition hover:opacity-100'}`}>Home</a><a href="#producto" className={`rounded-full px-5 py-2 text-sm font-medium ${active('#producto')}`}>Producto</a><a href="#features" className={`rounded-full px-5 py-2 text-sm font-medium ${active('#features')}`}>Features</a><a href="#industrias" className={`rounded-full px-5 py-2 text-sm font-medium ${active('#industrias')}`}>Industrias</a></nav></header>
+}
