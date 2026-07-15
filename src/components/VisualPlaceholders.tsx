@@ -7,9 +7,9 @@ export function PhoneMockup({ variant = 'card', label = 'iPhone mockup' }: Phone
 }
 
 export function ScenePlaceholder({ label, detail, tone = 'light' }: { label: string; detail: string; tone?: 'light' | 'dark' }) {
-  return <div className={`scene-placeholder scene-placeholder-${tone}`}><div className="scene-placeholder-grid"/><div className="scene-placeholder-content"><MapPin className="h-5 w-5" strokeWidth={1.5}/><span>{label}</span><small>{detail}</small></div></div>
+  return <figure className={`scene-placeholder scene-placeholder-${tone}`} aria-label={`${label}. ${detail}`}><div className="scene-placeholder-grid"/><figcaption className="scene-placeholder-content"><MapPin className="h-5 w-5" strokeWidth={1.5}/><span>{label}</span><small>{detail}</small></figcaption></figure>
 }
 
 export function CardPlaceholder({ label, detail, tone = 'mint' }: { label: string; detail: string; tone?: 'mint' | 'blue' | 'sand' }) {
-  return <div className={`card-placeholder card-placeholder-${tone}`}><div className="card-placeholder-art"><img src="/fidelio-card-strip.png" alt="Tarjeta Fidelio de referencia"/><div className="card-placeholder-overlay"/></div><div className="card-placeholder-copy"><span>{label}</span><small>{detail}</small></div></div>
+  return <figure className={`card-placeholder card-placeholder-${tone}`}><div className="card-placeholder-art"><img src="/fidelio-card-strip.png" alt={`Referencia visual para ${label}`}/><div className="card-placeholder-overlay"/></div><figcaption className="card-placeholder-copy"><span>{label}</span><small>{detail}</small></figcaption></figure>
 }
