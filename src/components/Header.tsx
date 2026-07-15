@@ -9,7 +9,7 @@ const links = [
 ] as const
 
 export function Header() {
-  const [pastHero, setPastHero] = useState(false)
+  const [pastHero, setPastHero] = useState(() => window.location.hash !== '' && window.location.hash !== '#home')
   const [hash, setHash] = useState(() => window.location.hash)
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export function Header() {
     return () => observer.disconnect()
   }, [hash])
 
-  const active = (value: string) => hash === value || (value === '#home' && hash === '')
+  const active = (value: string) => hash === value || (value === '#home' && hash === '') || (value === '#industrias' && hash.startsWith('#industrias/'))
   const theme = pastHero ? 'bg-white/75 text-foreground shadow-[0_8px_30px_rgba(20,25,20,.08)]' : 'bg-[var(--header-bg)] text-white'
 
   return <header className="fixed left-0 right-0 top-4 z-50 flex items-center justify-between gap-4 px-5 md:top-6 md:px-12">
