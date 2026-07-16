@@ -18,7 +18,7 @@ const industryLinks = [
 const companyLinks = [
   ['Sobre Fidelio', '#sobre'],
   ['Preguntas frecuentes', '#faq'],
-  ['Reserva una demo', '#demo'],
+  ['Reserva una demo', 'https://cal.com/alan-goldstein-z1hmxl/demo-fidelio'],
   ['hola@fidelio.lat', 'mailto:hola@fidelio.lat'],
 ]
 
@@ -35,7 +35,7 @@ export function Footer() {
     </div>
     <div className="flex flex-col gap-4 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
       <span>© 2026 Fidelio. Todos los derechos reservados.</span>
-      <a href="#demo" className="inline-flex items-center gap-2 text-white/70 transition hover:text-white">Hablemos de tu programa <ArrowUpRight className="h-3.5 w-3.5"/></a>
+      <a href="https://cal.com/alan-goldstein-z1hmxl/demo-fidelio" className="inline-flex items-center gap-2 text-white/70 transition hover:text-white">Hablemos de tu programa <ArrowUpRight className="h-3.5 w-3.5"/></a>
     </div>
   </footer>
 }

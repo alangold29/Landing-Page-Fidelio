@@ -45,7 +45,7 @@ export function Header() {
       <nav aria-label="Navegación principal" className={`hidden items-center gap-0.5 rounded-full p-1.5 backdrop-blur-md sm:flex ${navTheme}`}>
         {links.map(([href, label]) => <a key={href} href={href} aria-current={active(href) ? 'page' : undefined} className={`whitespace-nowrap rounded-full px-3 py-2 text-xs font-medium transition md:px-4 md:text-sm ${active(href) ? (pastHero ? 'bg-foreground text-white' : 'bg-white/12') : 'opacity-70 hover:opacity-100'}`}>{label}</a>)}
       </nav>
-      <a href="#demo" className="hidden items-center gap-1 rounded-full bg-[#9ae8af] px-4 py-2 text-sm font-medium text-[#122016] transition hover:bg-[#b8f6c7] lg:inline-flex">Demo <ArrowUpRight className="h-3.5 w-3.5" /></a>
+      <a href="https://cal.com/alan-goldstein-z1hmxl/demo-fidelio" className="hidden items-center gap-1 rounded-full bg-[#9ae8af] px-4 py-2 text-sm font-medium text-[#122016] transition hover:bg-[#b8f6c7] lg:inline-flex">Demo <ArrowUpRight className="h-3.5 w-3.5" /></a>
       <button type="button" aria-label={menuOpen ? 'Cerrar navegación' : 'Abrir navegación'} aria-expanded={menuOpen} onClick={() => setMenuOpen(open => !open)} className={`flex h-10 w-10 items-center justify-center rounded-full backdrop-blur-md transition sm:hidden ${navTheme}`}>
         {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
       </button>
@@ -53,7 +53,7 @@ export function Header() {
 
     {menuOpen && <nav aria-label="Navegación móvil" className={`absolute right-5 top-full mt-3 flex min-w-[220px] flex-col gap-1 rounded-2xl p-2 shadow-[0_16px_42px_rgba(20,25,20,.16)] backdrop-blur-md sm:hidden ${navTheme}`}>
       {links.map(([href, label]) => <a key={href} href={href} aria-current={active(href) ? 'page' : undefined} className={`rounded-xl px-4 py-3 text-sm font-medium transition ${active(href) ? (pastHero ? 'bg-foreground text-white' : 'bg-white/12') : 'opacity-75 hover:opacity-100'}`}>{label}</a>)}
-      <a href="#demo" className="mt-1 flex items-center justify-between rounded-xl bg-[#9ae8af] px-4 py-3 text-sm font-medium text-[#122016]">Reserva una demo <ArrowUpRight className="h-4 w-4" /></a>
+      <a href="https://cal.com/alan-goldstein-z1hmxl/demo-fidelio" className="mt-1 flex items-center justify-between rounded-xl bg-[#9ae8af] px-4 py-3 text-sm font-medium text-[#122016]">Reserva una demo <ArrowUpRight className="h-4 w-4" /></a>
     </nav>}
   </header>
 }
