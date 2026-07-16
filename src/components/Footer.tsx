@@ -16,6 +16,7 @@ const industryLinks = [
 ]
 
 const companyLinks = [
+  ['Sobre Fidelio', '#sobre'],
   ['Preguntas frecuentes', '#faq'],
   ['Reserva una demo', '#demo'],
   ['hola@fidelio.lat', 'mailto:hola@fidelio.lat'],
@@ -30,7 +31,7 @@ export function Footer() {
       </div>
       <FooterColumn title="Producto" links={productLinks}/>
       <FooterColumn title="Industrias" links={industryLinks}/>
-      <FooterColumn title="Contacto" links={companyLinks} contact/>
+      <FooterColumn title="Fidelio" links={companyLinks} contact/>
     </div>
     <div className="flex flex-col gap-4 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
       <span>© 2026 Fidelio. Todos los derechos reservados.</span>
