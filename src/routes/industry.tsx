@@ -81,7 +81,7 @@ export function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
     document.querySelector('meta[name="description"]')?.setAttribute('content', profile.description)
   }, [profile])
 
-  return <main className="min-h-screen bg-background px-8 pb-32 pt-36 md:px-12">
+  return <main className="min-h-screen bg-background px-5 pb-20 pt-28 sm:px-8 md:px-12 md:pb-32 md:pt-36">
     <section className="grid grid-cols-12 gap-12 pb-24 md:pb-28">
       <div className="col-span-12 md:col-span-8"><p className="mb-10 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{profile.eyebrow}</p><AnimatedHeading as="h1" className="font-display text-5xl font-medium leading-[1.01] tracking-[-.04em] md:text-6xl">{profile.title}</AnimatedHeading></div>
       <div className="col-span-12 self-end md:col-span-4 md:pb-2"><AnimatedText className="text-base leading-relaxed text-muted-foreground">{profile.description}</AnimatedText><a href="#demo" className="mt-8 inline-flex items-center gap-3 rounded-full bg-foreground py-2 pl-6 pr-2 text-sm font-medium text-white transition hover:bg-foreground/85">Reserva una demo<span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#9ae8af] text-foreground"><ArrowUpRight className="h-4 w-4"/></span></a></div>
