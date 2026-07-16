@@ -14,7 +14,7 @@ export function AboutPage() {
       <div className="grid grid-cols-12 gap-10 md:gap-12">
         <div className="col-span-12 md:col-span-8">
           <p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Sobre Fidelio</p>
-          <AnimatedHeading as="h1" className="font-display text-[clamp(2.6rem,9vw,6.2rem)] font-medium leading-[.96] tracking-[-.05em]">Los clientes no<br/>vuelven <span className="text-muted-foreground">por accidente.</span></AnimatedHeading>
+          <AnimatedHeading as="h1" className="font-display text-[clamp(2.6rem,9vw,6.2rem)] font-medium leading-[.96] tracking-[-.05em]">Los clientes no vuelven<br/><span className="text-muted-foreground">por accidente.</span></AnimatedHeading>
         </div>
         <AnimatedText className="col-span-12 self-end max-w-xl text-lg leading-relaxed text-muted-foreground md:col-span-4 md:pb-2">Un negocio local crece cuando una buena experiencia encuentra una razón concreta para repetirse.</AnimatedText>
       </div>
