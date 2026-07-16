@@ -15,13 +15,14 @@
 
 :root { --background: oklch(0.97 0.005 100); --foreground: oklch(0.18 0.01 100); --muted: oklch(0.93 0.005 100); --muted-foreground: oklch(0.45 0.01 100); --surface: oklch(0.94 0.005 100); --accent: oklch(0.55 0.12 155); --accent-foreground: oklch(0.98 0 0); --border: oklch(0.88 0.005 100); --header-bg: oklch(0.25 0.01 100 / 0.85); }
 * { border-color: var(--color-border); box-sizing: border-box; }
-html { min-width: 0; overflow-x: clip; scroll-behavior: smooth; }
-body, #root { min-width: 0; max-width: 100%; overflow-x: clip; }
-main, section, [class*="grid"] > * { min-width: 0; }
+html { min-width: 0; max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
+body, #root { width: 100%; min-width: 0; max-width: 100%; overflow-x: hidden; }
+main, section, [class*="grid"] > *, .flex > * { min-width: 0; }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible { outline: 2px solid #2c8f58; outline-offset: 4px; }
-img { display: block; }
+img, svg { display: block; max-width: 100%; }
+p, h1, h2, h3 { overflow-wrap: break-word; }
 
 .visual-phone-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .visual-phone { position: relative; width: 262px; height: 530px; padding: 9px; border: 1px solid rgba(255,255,255,.3); border-radius: 42px; background: linear-gradient(145deg,#3a403c,#0b0f0c 55%,#526056); box-shadow: 0 35px 70px rgba(0,0,0,.35), inset 0 1px 1px rgba(255,255,255,.35); }
@@ -46,6 +47,7 @@ img { display: block; }
   main > section:not(#home) { padding: 5rem 1.25rem; }
   main > section#demo { padding-top: 5rem; padding-bottom: 5rem; }
   main > section:not(#home) .grid { gap: 2.5rem; }
+  [class*="grid-cols-12"] { column-gap: 0 !important; row-gap: 2.5rem !important; }
   main > section:not(#home) .mt-24 { margin-top: 3.5rem; }
   main > section:not(#home) .mb-20 { margin-bottom: 3.5rem; }
   .visual-phone { width: 244px; height: 494px; transform: none; margin-bottom: 0; }
@@ -57,6 +59,8 @@ img { display: block; }
   .scene-placeholder-content { right: 18px; bottom: 18px; left: 18px; align-items: flex-start; flex-wrap: wrap; gap: 7px; }
   .scene-placeholder-content small { width: 100%; max-width: none; margin-left: 0; text-align: left; }
   .card-placeholder-art { height: 160px; }
+  .flex-1 { min-width: 0; }
+  .flex > p, .flex-1 > p { max-width: 100%; }
 }
 
 @media (max-width: 479px) {
