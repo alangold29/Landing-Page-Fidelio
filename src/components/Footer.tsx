@@ -1,9 +1,11 @@
 import { ArrowUpRight } from 'lucide-react'
 
 const productLinks = [
-  ['Cómo funciona', '#como-funciona'],
-  ['Tarjetas digitales', '#producto'],
-  ['Activación', '#features'],
+  ['Ver producto', '#producto'],
+  ['Tarjetas digitales', '#tarjetas'],
+  ['Notificaciones', '#notificaciones'],
+  ['Automatizaciones', '#automatizaciones'],
+  ['Analítica', '#analitica'],
 ]
 
 const industryLinks = [
