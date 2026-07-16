@@ -15,12 +15,12 @@ function Hero() {
 function ProblemSection() {
   return <section id="problema" className="bg-[#e8ebe4] px-5 py-20 sm:px-8 sm:py-24 md:px-12 md:py-32">
     <div className="grid grid-cols-12 gap-10 md:gap-12">
-      <div className="col-span-12 md:col-span-7"><p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground sm:mb-12">El problema</p><AnimatedHeading className="font-display text-[clamp(2.25rem,6vw,5rem)] font-medium leading-[1.01] tracking-[-.045em]">Una visita no basta<br/><span className="text-muted-foreground">para construir un hábito.</span></AnimatedHeading></div>
+      <div className="col-span-12 md:col-span-7"><p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground sm:mb-12">El problema</p><AnimatedHeading className="font-display text-[clamp(2.25rem,6vw,5rem)] font-medium leading-[1.01] tracking-[-.045em]">Una visita no basta para<br/><span className="text-muted-foreground">construir un hábito.</span></AnimatedHeading></div>
       <AnimatedText className="col-span-12 self-end max-w-xl text-base leading-relaxed text-muted-foreground md:col-span-4 md:col-start-9 md:pb-2">El problema no es solo conseguir visitas. Es no saber cuáles vuelven ni tener una forma simple de darles una razón para regresar.</AnimatedText>
     </div>
     <div className="mt-14 grid grid-cols-1 border-t border-foreground/15 sm:mt-20 md:mt-24 md:grid-cols-2">
       <article className="border-b border-foreground/15 py-10 md:border-b-0 md:border-r md:pr-16"><span className="text-xs text-muted-foreground">01</span><h2 className="mt-12 text-3xl font-medium tracking-[-.035em]">Cada visita empieza de cero.</h2><p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground">Muchos locales atienden, cobran y ven salir al cliente sin una forma directa de continuar la relación después de esa visita.</p></article>
-      <article className="border-b border-foreground/15 py-10 md:border-b-0 md:pl-16"><span className="text-xs text-muted-foreground">02</span><h2 className="mt-12 text-3xl font-medium tracking-[-.035em]">El retorno no se ve.</h2><p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground">Sin saber quién vuelve, qué beneficio funciona o qué campaña activa una recompra, es difícil decidir cómo fidelizar mejor.</p></article>
+      <article className="border-b border-foreground/15 py-10 md:border-b-0 md:pl-16"><span className="text-xs text-muted-foreground">02</span><h2 className="mt-12 text-3xl font-medium tracking-[-.035em]">El retorno no se ve.</h2><p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground">Sin saber quién vuelve, qué beneficio funciona o qué activa una recompra, es difícil fidelizar mejor.</p></article>
     </div>
   </section>
 }
