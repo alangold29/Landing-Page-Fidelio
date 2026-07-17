@@ -2,6 +2,7 @@ import { ArrowUpRight, Bell, CircleGauge, WalletCards, Zap } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { AnimatedHeading, AnimatedText } from '../components/AnimatedHeading'
 import { PhoneMockup } from '../components/VisualPlaceholders'
+import { AnalyticsDashboardPreview } from '../components/AnalyticsDashboardPreview'
 
 export const featureSlugs = ['tarjetas', 'notificaciones', 'automatizaciones', 'analitica'] as const
 export type FeatureSlug = typeof featureSlugs[number]
@@ -40,7 +41,7 @@ const profiles: Record<FeatureSlug, FeatureProfile> = {
 export function isFeatureSlug(value: string): value is FeatureSlug { return featureSlugs.includes(value as FeatureSlug) }
 
 function FeatureProductVisual({ type, label }: { type: ProductVisual; label: string }) {
-  if (type === 'analytics') return <figure className="w-full overflow-hidden rounded-[28px] border border-border bg-[#e8ebe4] p-8 md:p-12"><div className="flex aspect-[16/10] flex-col justify-between rounded-[18px] border border-foreground/15 bg-background p-6"><div className="flex items-center justify-between text-[11px] uppercase tracking-[0.18em] text-muted-foreground"><span>Taply / analítica</span><CircleGauge className="h-5 w-5 text-[#2c8f58]" strokeWidth={1.5}/></div><div><p className="font-display text-3xl tracking-[-.04em] md:text-4xl">Dashboard en construcción.</p><p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">Este espacio recibirá el dashboard de Taply con métricas de visitas, campañas y retorno.</p></div><p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Próximo visual de producto</p></div><figcaption className="mt-5 text-xs uppercase tracking-[0.16em] text-muted-foreground">{label}</figcaption></figure>
+  if (type === 'analytics') return <figure className="w-full"><AnalyticsDashboardPreview/><figcaption className="mt-5 text-xs uppercase tracking-[0.16em] text-muted-foreground">{label} · Explora las vistas del programa</figcaption></figure>
   return <div className="flex flex-col items-center"><PhoneMockup variant={type === 'card' ? 'card' : 'notification'} label={label}/>{type === 'automation' && <p className="mt-3 text-xs uppercase tracking-[0.16em] text-muted-foreground">Visita → regla → mensaje</p>}</div>
 }
 
