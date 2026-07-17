@@ -85,7 +85,7 @@ export function Header() {
   const linkClass = (isActive: boolean) => `whitespace-nowrap rounded-full px-3 py-2 text-xs font-medium transition md:px-4 md:text-sm ${isActive ? (pastHero ? 'bg-foreground text-white' : 'bg-white/12') : 'opacity-70 hover:opacity-100'}`
 
   return <header className="fixed left-0 right-0 top-4 z-50 flex items-center justify-between gap-3 px-5 sm:px-8 md:top-6 md:px-12">
-    <a href="#home" aria-label="Fidelio, inicio" className={`shrink-0 font-display text-2xl font-medium tracking-[-.04em] ${logoTheme}`}>Fidelio<span className="text-[#72c888]">.</span></a>
+    <a href="#home" aria-label="Taply, inicio" className={`shrink-0 font-display text-2xl font-medium tracking-[-.04em] ${logoTheme}`}>Taply<span className="text-[#72c888]">.</span></a>
     <div className="flex items-center gap-3">
       <nav aria-label="Navegación principal" className={`hidden items-center gap-0.5 rounded-full p-1.5 backdrop-blur-md sm:flex ${navTheme}`}>
         <a href="#home" aria-current={active('#home') ? 'page' : undefined} className={linkClass(active('#home'))}>Home</a>
