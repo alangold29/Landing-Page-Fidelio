@@ -41,39 +41,79 @@ function ProgramsSection() { const programs = [{ title: 'Tarjeta de sellos', tex
 
 function ActivationSection() { const features = [{ icon: Bell, eyebrow: 'Notificaciones', title: 'Envía el mensaje adecuado en el momento adecuado.', text: 'Instantáneas, programadas o basadas en ubicación para llegar directamente a la pantalla de bloqueo.' }, { icon: Zap, eyebrow: 'Automatizaciones', title: 'Automatiza tu marketing con un solo toque.', text: 'Configura reglas basadas en acciones reales y deja que Taply active el siguiente contacto.' }, { icon: CircleGauge, eyebrow: 'Analítica completa', title: 'Mide tu éxito y comprueba cómo vuelven.', text: 'Entiende el crecimiento del programa y decide qué hacer con cada segmento de clientes.' }]; return <section id="features" className="bg-foreground px-8 py-32 text-white md:px-12"><div className="grid grid-cols-12 gap-12"><div className="col-span-12 md:col-span-8"><p className="mb-12 text-[11px] uppercase tracking-[0.2em] text-white/45">Más que una tarjeta</p><AnimatedHeading className="font-display text-5xl font-medium leading-[1.02] tracking-[-.035em] md:text-[clamp(3rem,3.3vw,3.75rem)] md:whitespace-nowrap">El Wallet también <span className="text-white/40">hace el trabajo.</span></AnimatedHeading><AnimatedText className="mt-6 text-base leading-relaxed text-white/50 md:whitespace-nowrap">La tarjeta es el medio. Hacer que el cliente vuelva es el resultado.</AnimatedText></div></div><figure className="mt-14 overflow-hidden rounded-[22px] border border-white/10 sm:mt-16"><img className="aspect-[16/9] h-full w-full object-cover object-center md:aspect-[16/6]" src="/images/fidelio-home-retencion.webp" alt="Dueño de un negocio local conversando con una clienta habitual en el mostrador"/><figcaption className="sr-only">Una relación real entre un negocio local y quien vuelve.</figcaption></figure><div className="mt-16 grid grid-cols-1 border-t border-white/15 md:mt-24 md:grid-cols-3">{features.map(({ icon: Icon, eyebrow, title, text }, i) => <div key={eyebrow} className="border-b border-white/15 py-10 md:border-b-0 md:border-r md:px-10 md:first:pl-0 md:last:border-r-0"><div className="mb-16 flex items-center justify-between"><span className="text-xs text-white/40">(0{i + 1})</span><Icon className="h-5 w-5 text-white/60" strokeWidth={1.5}/></div><p className="mb-4 text-[11px] uppercase tracking-[0.2em] text-white/45">{eyebrow}</p><AnimatedHeading as="h3" className="text-2xl font-medium leading-tight">{title}</AnimatedHeading><AnimatedText className="mt-4 max-w-xs text-sm leading-relaxed text-white/50">{text}</AnimatedText></div>)}</div></section> }
 
-function IndustriesSection() { const industries = [{ name: 'Cafeterías', slug: 'cafeterias', promise: 'Aumenta la frecuencia de cada visita.' }, { name: 'Bares', slug: 'bares', promise: 'Activa la próxima noche.' }, { name: 'Restaurantes', slug: 'restaurantes', promise: 'Convierte una visita en una próxima reserva.' }, { name: 'Comercios', slug: 'comercios', promise: 'Convierte compras en clientes habituales.' }, { name: 'Panaderías', slug: 'panaderias', promise: 'Convierte compras en hábito.' }, { name: 'Eventos', slug: 'eventos', promise: 'Un pass digital para cada acceso.' }]; return <section id="industrias" className="px-8 py-32 md:px-12"><div className="grid grid-cols-12 gap-12"><div className="col-span-12 md:col-span-6"><p className="mb-12 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Taply por industria</p><AnimatedHeading className="font-display text-[clamp(2.25rem,8vw,2.75rem)] font-medium leading-[1.02] tracking-[-.035em] md:text-6xl">Una forma de fidelizar<br/><span className="text-muted-foreground">para cada negocio.</span></AnimatedHeading></div><AnimatedText className="col-span-12 self-end text-base leading-relaxed text-muted-foreground md:col-span-4 md:col-start-9">Taply combina tarjeta, mensajes, automatizaciones y medición. Adaptamos el programa al ritmo y al momento de compra de tu negocio.</AnimatedText></div><div className="mt-24 grid grid-cols-1 border-t border-border md:grid-cols-2">{industries.map((industry, i) => <a key={industry.name} href={`#industrias/${industry.slug}`} className="group flex min-w-0 items-start gap-6 border-b border-border py-8 md:pr-12"><span className="shrink-0 text-xs text-muted-foreground">0{i + 1}</span><div className="min-w-0 flex-1"><div className="flex min-w-0 items-center justify-between gap-6"><h3 className="text-2xl font-medium">{industry.name}</h3><ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground transition group-hover:-translate-y-1 group-hover:translate-x-1"/></div><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{industry.promise}</p></div></a>)}</div></section> }
+function IndustriesSection() { const industries = [{ name: 'Cafeterías', slug: 'cafeterias', promise: 'Aumenta la frecuencia de cada visita.' }, { name: 'Bares', slug: 'bares', promise: 'Activa la próxima noche.' }, { name: 'Restaurantes', slug: 'restaurantes', promise: 'Convierte una visita en una próxima reserva.' }, { name: 'Comercios', slug: 'comercios', promise: 'Convierte compras en clientes habituales.' }, { name: 'Panaderías', slug: 'panaderias', promise: 'Convierte compras en hábito.' }, { name: 'Eventos', slug: 'eventos', promise: 'Un pass digital para cada acceso.' }]; return <section id="industrias" className="px-8 py-32 md:px-12"><div className="grid grid-cols-12 gap-12"><div className="col-span-12 md:col-span-6"><p className="mb-12 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Taply por industria</p><AnimatedHeading className="font-display text-[clamp(2.25rem,8vw,2.75rem)] font-medium leading-[1.02] tracking-[-.035em] md:text-6xl">Una forma de fidelizar<br/><span className="text-muted-foreground">para cada negocio.</span></AnimatedHeading></div><AnimatedText className="col-span-12 self-end text-base leading-relaxed text-muted-foreground md:col-span-4 md:col-start-9">Taply combina tarjeta, mensajes, automatizaciones y medición. Adaptamos el programa al ritmo y al momento de compra de tu negocio.</AnimatedText></div><div className="mt-24 grid grid-cols-1 border-t border-border md:grid-cols-2">{industries.map((industry, i) => <a key={industry.name} href={`/industrias/${industry.slug}`} className="group flex min-w-0 items-start gap-6 border-b border-border py-8 md:pr-12"><span className="shrink-0 text-xs text-muted-foreground">0{i + 1}</span><div className="min-w-0 flex-1"><div className="flex min-w-0 items-center justify-between gap-6"><h3 className="text-2xl font-medium">{industry.name}</h3><ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground transition group-hover:-translate-y-1 group-hover:translate-x-1"/></div><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{industry.promise}</p></div></a>)}</div></section> }
 
 function FAQSection() { const faqs = ['¿Mis clientes necesitan descargar una app?', '¿Cómo reemplaza Taply una tarjeta de sellos en papel?', '¿Qué tipo de notificaciones puedo enviar?', '¿Taply funciona con mi sistema de ventas?', '¿Cuánto tiempo toma lanzar el programa?']; const [open, setOpen] = useState(0); const answers = ['No. Las tarjetas viven dentro de Apple Wallet y Google Wallet. No hay nada que descargar ni otra cuenta que crear.', 'Cada sello o punto se actualiza cuando tu equipo escanea el QR del cliente. El avance queda guardado en tiempo real y no se pierde.', 'Puedes enviar notificaciones instantáneas, campañas programadas, recordatorios por fecha, mensajes por cercanía y activaciones basadas en comportamiento.', 'Sí. Taply puede funcionar de forma independiente, sin cambiar nada en caja. Para operaciones más grandes se pueden evaluar integraciones con POS o CRM.', 'Un local independiente puede quedar listo rápidamente. El tiempo depende de la tarjeta, la configuración de recompensas y los canales que quieras activar.']; return <section id="faq" className="bg-[#e8ebe4] px-8 py-32 md:px-12"><div className="grid grid-cols-12 gap-12"><div className="col-span-12 md:col-span-5"><p className="mb-12 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Preguntas frecuentes</p><AnimatedHeading className="font-display text-5xl font-medium leading-[1.02] tracking-[-.035em] md:text-6xl">Lo que necesitas<br/>saber antes<br/><span className="text-muted-foreground">de empezar.</span></AnimatedHeading></div><div className="col-span-12 md:col-span-6 md:col-start-7">{faqs.map((question, i) => <div key={question} className="border-t border-foreground/15 py-6"><button className="flex w-full items-center justify-between gap-6 text-left" onClick={() => setOpen(open === i ? -1 : i)}><span className="text-lg font-medium">{question}</span><ChevronDown className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform ${open === i ? 'rotate-180' : ''}`}/></button>{open === i && <AnimatedText className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">{answers[i]}</AnimatedText>}</div>)}</div></div></section> }
 
 function ClosingSection() { return <section id="demo" className="bg-[#131612] px-8 py-32 text-white md:px-12 md:py-40"><div className="grid grid-cols-12 gap-12"><div className="col-span-12 md:col-span-8"><p className="mb-12 text-[11px] uppercase tracking-[0.2em] text-white/45">Empieza a aumentar la frecuencia de visita</p><AnimatedHeading className="font-display text-5xl font-medium leading-[1.02] tracking-[-.035em] md:text-7xl">Convierte más visitas<br/><span className="text-white/40">en clientes habituales.</span></AnimatedHeading></div><div className="col-span-12 self-end md:col-span-3 md:col-start-10"><AnimatedText className="text-base leading-relaxed text-white/50">Reserva una demo y descubre qué programa, campaña y métrica tienen más sentido para tu negocio.</AnimatedText><a href="https://cal.com/alan-goldstein-z1hmxl/demo-fidelio" className="mt-8 inline-flex items-center gap-3 rounded-full bg-white py-2 pl-6 pr-2 text-sm font-medium text-foreground transition hover:bg-white/90">Reserva una demo<span className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground text-white"><ArrowUpRight className="h-4 w-4"/></span></a></div></div></section> }
 
+const seoPages: Record<string, { title: string; description: string }> = {
+  '#home': { title: 'Taply | Fidelización para negocios locales', description: 'Tarjetas de fidelización digitales para Apple Wallet y Google Wallet. Haz que más clientes vuelvan a tu negocio local, sin app y sin complicar tu operación.' },
+  '/producto': { title: 'Producto | Taply', description: 'Tarjetas digitales, notificaciones, automatizaciones y analítica para aumentar la frecuencia de visita en negocios locales.' },
+  '/features': { title: 'Activación de clientes | Taply', description: 'Activa la próxima visita con notificaciones, automatizaciones y analítica de fidelización para negocios locales.' },
+  '/tarjetas': { title: 'Tarjetas digitales de fidelización | Taply', description: 'Crea tarjetas de fidelización en Apple Wallet y Google Wallet para que tus clientes vuelvan a tu negocio.' },
+  '/notificaciones': { title: 'Notificaciones para fidelizar clientes | Taply', description: 'Envía motivos relevantes para volver desde Apple Wallet y Google Wallet.' },
+  '/automatizaciones': { title: 'Automatizaciones de fidelización | Taply', description: 'Activa beneficios y mensajes a partir de visitas, inactividad y momentos relevantes.' },
+  '/analitica': { title: 'Analítica de fidelización | Taply', description: 'Entiende qué beneficios, campañas y momentos generan más retorno en tu negocio.' },
+  '/industrias': { title: 'Fidelización por industria | Taply', description: 'Programas de fidelización para cafeterías, restaurantes, bares, comercios, panaderías y eventos.' },
+  '/industrias/cafeterias': { title: 'Fidelización para cafeterías | Taply', description: 'Haz que cada café acerque a tus clientes a su próxima visita.' },
+  '/industrias/restaurantes': { title: 'Fidelización para restaurantes | Taply', description: 'Convierte una buena mesa en una próxima reserva con fidelización digital.' },
+  '/industrias/bares': { title: 'Fidelización para bares | Taply', description: 'Da a tus clientes una razón relevante para elegir tu próxima noche.' },
+  '/industrias/comercios': { title: 'Fidelización para comercios locales | Taply', description: 'Convierte compras en clientes habituales con una tarjeta digital en Wallet.' },
+  '/industrias/panaderias': { title: 'Fidelización para panaderías | Taply', description: 'Convierte compras diarias en un hábito que vuelve.' },
+  '/industrias/eventos': { title: 'Fidelización para eventos | Taply', description: 'Mantén la relación desde el primer acceso con un pass digital.' },
+  '/sobre': { title: 'Sobre Taply | Fidelización para negocios locales', description: 'Conoce por qué Taply ayuda a los negocios locales a construir relaciones que vuelven.' },
+}
+
+function currentRoute() {
+  return window.location.pathname === '/' ? (window.location.hash || '#home') : window.location.pathname.replace(/\/$/, '')
+}
+
 function App() {
-  const [hash, setHash] = useState(() => window.location.hash)
+  const [route, setRoute] = useState(currentRoute)
 
   useEffect(() => {
-    const onHash = () => setHash(window.location.hash)
-    addEventListener('hashchange', onHash)
-    return () => removeEventListener('hashchange', onHash)
+    const onRouteChange = () => setRoute(currentRoute())
+    addEventListener('hashchange', onRouteChange)
+    addEventListener('popstate', onRouteChange)
+    return () => {
+      removeEventListener('hashchange', onRouteChange)
+      removeEventListener('popstate', onRouteChange)
+    }
   }, [])
 
-  const industrySlug = hash.replace('#industrias/', '')
-  const featureSlug = hash.replace('#', '')
+  const normalizedRoute = route.startsWith('#') ? `/${route.slice(1)}` : route
+  const industrySlug = normalizedRoute.replace('/industrias/', '')
+  const featureSlug = normalizedRoute.replace('/', '')
+
+  useEffect(() => {
+    const seo = seoPages[normalizedRoute] ?? seoPages['#home']
+    const url = `https://gettaply.xyz${normalizedRoute === '/home' ? '/' : normalizedRoute}`
+    document.title = seo.title
+    document.querySelector('meta[name="description"]')?.setAttribute('content', seo.description)
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', url)
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', url)
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', seo.title)
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', seo.description)
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', seo.title)
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', seo.description)
+  }, [normalizedRoute])
 
   useEffect(() => {
     if (
-      ['', '#home', '#producto', '#features', '#industrias', '#sobre'].includes(hash)
-      || hash.startsWith('#industrias/')
+      ['/', '/home', '/producto', '/features', '/industrias', '/sobre'].includes(normalizedRoute)
+      || normalizedRoute.startsWith('/industrias/')
       || isFeatureSlug(featureSlug)
     ) window.scrollTo(0, 0)
-  }, [featureSlug, hash])
+  }, [featureSlug, normalizedRoute])
 
-  const page = hash === '#sobre'
+  const page = normalizedRoute === '/sobre'
     ? <AboutPage/>
-    : hash === '#producto'
+    : normalizedRoute === '/producto'
       ? <ProductPage/>
-      : hash === '#features'
+      : normalizedRoute === '/features'
         ? <FeaturesPage/>
-        : hash === '#industrias'
+        : normalizedRoute === '/industrias'
           ? <IndustriesPage/>
           : isIndustrySlug(industrySlug)
             ? <IndustryLandingPage slug={industrySlug}/>
