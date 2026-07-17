@@ -18,25 +18,25 @@ const industryLinks = [
 ]
 
 const companyLinks = [
-  ['Sobre Fidelio', '#sobre'],
+  ['Sobre Taply', '#sobre'],
   ['Preguntas frecuentes', '#faq'],
   ['Reserva una demo', 'https://cal.com/alan-goldstein-z1hmxl/demo-fidelio'],
-  ['hola@fidelio.lat', 'mailto:hola@fidelio.lat'],
+  ['hola@gettaply.xyz', 'mailto:hola@gettaply.xyz'],
 ]
 
 export function Footer() {
   return <footer className="bg-[#0d100d] px-5 py-16 text-white sm:px-8 md:px-12 md:py-20">
     <div className="grid gap-12 border-b border-white/15 pb-14 md:grid-cols-12 md:gap-8 md:pb-20">
       <div className="md:col-span-3">
-        <a href="#home" className="font-display text-3xl font-medium tracking-[-.04em]">Fidelio<span className="text-[#72c888]">.</span></a>
+        <a href="#home" className="font-display text-3xl font-medium tracking-[-.04em]">Taply<span className="text-[#72c888]">.</span></a>
         <p className="mt-6 max-w-[15rem] text-sm leading-relaxed text-white/50">Tarjetas de fidelización para que los negocios locales creen más frecuencia y retorno.</p>
       </div>
       <FooterColumn title="Producto" links={productLinks}/>
       <FooterColumn title="Industrias" links={industryLinks}/>
-      <FooterColumn title="Fidelio" links={companyLinks} contact/>
+      <FooterColumn title="Taply" links={companyLinks} contact/>
     </div>
     <div className="flex flex-col gap-4 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
-      <span>© 2026 Fidelio. Todos los derechos reservados.</span>
+      <span>© 2026 Taply. Todos los derechos reservados.</span>
       <a href="https://cal.com/alan-goldstein-z1hmxl/demo-fidelio" className="inline-flex items-center gap-2 text-white/70 transition hover:text-white">Hablemos de tu programa <ArrowUpRight className="h-3.5 w-3.5"/></a>
     </div>
   </footer>
