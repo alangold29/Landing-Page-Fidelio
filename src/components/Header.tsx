@@ -39,7 +39,7 @@ export function Header() {
   const logoTheme = pastHero ? 'text-foreground' : 'text-white'
 
   return <header className="fixed left-0 right-0 top-4 z-50 flex items-center justify-between gap-3 px-5 sm:px-8 md:top-6 md:px-12">
-    <a href="#home" aria-label="Fidelio, inicio" className={`shrink-0 font-display text-2xl font-medium tracking-[-.04em] ${logoTheme}`}>Fidelio<span className="text-[#72c888]">.</span></a>
+    <a href="#home" aria-label="Taply, inicio" className={`shrink-0 font-display text-2xl font-medium tracking-[-.04em] ${logoTheme}`}>Taply<span className="text-[#72c888]">.</span></a>
 
     <div className="flex items-center gap-3">
       <nav aria-label="Navegación principal" className={`hidden items-center gap-0.5 rounded-full p-1.5 backdrop-blur-md sm:flex ${navTheme}`}>
