@@ -17,4 +17,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://gettaply.xyz/sitemap.xml
+Sitemap: https://www.gettaply.xyz/sitemap.xml

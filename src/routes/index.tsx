@@ -88,7 +88,7 @@ function App() {
 
   useEffect(() => {
     const seo = seoPages[normalizedRoute] ?? seoPages['#home']
-    const url = `https://gettaply.xyz${normalizedRoute === '/home' ? '/' : normalizedRoute}`
+    const url = `https://www.gettaply.xyz${normalizedRoute === '/home' ? '/' : normalizedRoute}`
     document.title = seo.title
     document.querySelector('meta[name="description"]')?.setAttribute('content', seo.description)
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', url)
