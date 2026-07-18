@@ -50,9 +50,7 @@ export const industryProfiles: Record<IndustrySlug, IndustryProfile> = {
     eyebrow: "Taply para cafeterías",
     title: (
       <>
-        Haz que el café de hoy
-        <br />
-        traiga la <span>próxima visita.</span>
+        Haz que el café de hoy traiga la <span>próxima visita.</span>
       </>
     ),
     description:
@@ -97,9 +95,7 @@ export const industryProfiles: Record<IndustrySlug, IndustryProfile> = {
     eyebrow: "Taply para bares",
     title: (
       <>
-        Haz que una noche buena
-        <br />
-        se convierta en <span>la próxima salida.</span>
+        Haz que una noche buena se convierta en <span>la próxima salida.</span>
       </>
     ),
     description:
@@ -145,9 +141,7 @@ export const industryProfiles: Record<IndustrySlug, IndustryProfile> = {
     eyebrow: "Taply para restaurantes",
     title: (
       <>
-        Convierte una buena mesa
-        <br />
-        en una <span>próxima reserva.</span>
+        Convierte una buena mesa en una <span>próxima reserva.</span>
       </>
     ),
     description:
@@ -191,9 +185,7 @@ export const industryProfiles: Record<IndustrySlug, IndustryProfile> = {
     eyebrow: "Taply para comercios",
     title: (
       <>
-        Haz que una compra
-        <br />
-        sea el inicio de <span>la siguiente.</span>
+        Haz que una compra sea el inicio de <span>la siguiente.</span>
       </>
     ),
     description:
@@ -238,9 +230,7 @@ export const industryProfiles: Record<IndustrySlug, IndustryProfile> = {
     eyebrow: "Taply para panaderías",
     title: (
       <>
-        Convierte compras diarias
-        <br />
-        en un <span>hábito que vuelve.</span>
+        Convierte compras diarias en un <span>hábito que vuelve.</span>
       </>
     ),
     description:
@@ -284,9 +274,7 @@ export const industryProfiles: Record<IndustrySlug, IndustryProfile> = {
     eyebrow: "Taply para eventos",
     title: (
       <>
-        Tu evento sigue presente
-        <br />
-        desde el <span>primer acceso.</span>
+        Tu evento sigue presente desde el <span>primer acceso.</span>
       </>
     ),
     description:
@@ -344,17 +332,17 @@ export function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
   return (
     <main className="min-h-screen bg-background px-5 pb-20 pt-28 sm:px-8 md:px-12 md:pb-32 md:pt-36">
       <section className="grid grid-cols-12 gap-12 pb-24 md:pb-28">
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8 xl:col-span-12">
           <p className="mb-10 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             {profile.eyebrow}
           </p>
           <AnimatedHeading
             as="h1"
-            className="font-display text-5xl font-medium leading-[1.01] tracking-[-.04em] md:text-6xl"
+            className="font-display text-5xl font-medium leading-[1.01] tracking-[-.04em] md:text-6xl xl:whitespace-nowrap xl:text-5xl"
           >
             {profile.title}
           </AnimatedHeading>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
             {profile.description}
           </AnimatedText>
           <a
@@ -470,9 +458,8 @@ export function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             Hecho para tu operación
           </p>
-          <h2 className="mt-7 text-4xl font-medium leading-tight tracking-[-.03em]">
-            Más frecuencia.
-            <br />
+          <h2 className="mt-7 text-4xl font-medium leading-tight tracking-[-.03em] xl:whitespace-nowrap">
+            Más frecuencia.{" "}
             <span className="text-muted-foreground">Más retorno.</span>
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
@@ -496,10 +483,8 @@ export function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             Taply para {profile.label.toLowerCase()}
           </p>
-          <h2 className="mt-5 text-4xl font-medium tracking-[-.035em] md:text-5xl">
-            Diseñemos el programa
-            <br />
-            para tu negocio.
+          <h2 className="mt-5 text-4xl font-medium tracking-[-.035em] md:text-5xl xl:whitespace-nowrap xl:text-4xl">
+            Diseñemos el programa para tu negocio.
           </h2>
         </div>
         <a

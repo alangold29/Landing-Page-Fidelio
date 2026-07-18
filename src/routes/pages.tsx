@@ -83,11 +83,8 @@ export function ProductPage() {
       eyebrow="Producto / Taply"
       title={
         <>
-          La tarjeta es el medio.
-          <br />
-          <span>Hacer que vuelvan</span>
-          <br />
-          es el resultado.
+          La tarjeta es el medio. <span>Hacer que vuelvan</span> es el
+          resultado.
         </>
       }
       intro="Un sistema de fidelización para negocios locales que quieren dejar de depender únicamente de la próxima venta y construir una frecuencia de compra medible."
@@ -106,14 +103,13 @@ export function ProductPage() {
           <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             Una base simple
           </p>
-          <h2 className="mt-7 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em]">
-            Tu marca en el celular.
-            <br />
+          <h2 className="mt-7 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em] xl:whitespace-nowrap xl:text-[3rem]">
+            Tu marca en el celular.{" "}
             <span className="text-muted-foreground">
               El siguiente paso, listo.
             </span>
           </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
             Taply conecta tarjeta, mensajes, automatizaciones y medición. Todo
             empieza con una visita y una razón clara para que la siguiente
             ocurra.
@@ -128,9 +124,8 @@ export function ProductPage() {
           <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             Conoce el producto
           </p>
-          <h2 className="mt-6 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em]">
-            Cuatro capacidades.
-            <br />
+          <h2 className="mt-6 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em] xl:whitespace-nowrap xl:text-[3rem]">
+            Cuatro capacidades.{" "}
             <span className="text-muted-foreground">
               Una relación que sigue.
             </span>
@@ -274,9 +269,7 @@ export function FeaturesPage() {
       eyebrow="Producto / Activación"
       title={
         <>
-          El Wallet también
-          <br />
-          <span>hace el trabajo.</span>
+          El Wallet también <span>hace el trabajo.</span>
         </>
       }
       intro="La tarjeta es el punto de entrada. Las notificaciones activan el regreso, las automatizaciones sostienen la relación y la analítica conecta las acciones con el retorno."
@@ -359,11 +352,7 @@ export function IndustriesPage() {
       eyebrow="Taply / Industrias"
       title={
         <>
-          Una lógica de producto.
-          <br />
-          <span>Distintos momentos</span>
-          <br />
-          de consumo.
+          Una lógica de producto. <span>Distintos momentos</span> de consumo.
         </>
       }
       intro="La estructura se mantiene: tarjeta, comunicación, automatización y medición. Lo que cambia es la frecuencia, el momento y la operación de cada negocio."
@@ -430,16 +419,15 @@ export function IndustriesPage() {
         />
       </div>
       <section className="mt-24 grid grid-cols-12 gap-12 border-t border-border pt-20">
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8 xl:col-span-12">
           <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             Para cualquier momento de consumo
           </p>
-          <h2 className="mt-8 text-4xl font-medium leading-tight">
-            Más frecuencia.
-            <br />
+          <h2 className="mt-8 text-4xl font-medium leading-tight xl:whitespace-nowrap">
+            Más frecuencia.{" "}
             <span className="text-muted-foreground">Más retorno.</span>
           </h2>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
             Taply no promete una cifra universal. Ayuda a cada negocio a
             descubrir qué oferta, campaña y momento generan más regreso.
           </AnimatedText>
@@ -463,17 +451,17 @@ function PageShell({
   return (
     <main className="min-h-screen bg-background px-5 pb-20 pt-28 sm:px-8 md:px-12 md:pb-32 md:pt-36">
       <div className="grid grid-cols-12 gap-10 pb-16 md:gap-12 md:pb-28">
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8 xl:col-span-12">
           <p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:mb-10">
             {eyebrow}
           </p>
           <AnimatedHeading
             as="h1"
-            className="font-display text-[clamp(2.25rem,10vw,3rem)] font-medium leading-[1.01] tracking-[-.04em] md:text-6xl"
+            className="font-display text-[clamp(2.25rem,10vw,3rem)] font-medium leading-[1.01] tracking-[-.04em] md:text-6xl xl:whitespace-nowrap xl:text-[2.85rem]"
           >
             {title}
           </AnimatedHeading>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
             {intro}
           </AnimatedText>
         </div>
