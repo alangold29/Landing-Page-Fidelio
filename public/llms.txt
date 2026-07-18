@@ -1,0 +1,26 @@
+# Taply
+
+Taply es una plataforma de fidelización para negocios locales. Ayuda a convertir visitas ocasionales en clientes habituales mediante tarjetas digitales en Apple Wallet y Google Wallet, notificaciones, automatizaciones y analítica de retorno.
+
+## Producto
+
+- [Inicio](https://www.gettaply.xyz/): tarjetas de fidelización digitales para negocios locales.
+- [Producto](https://www.gettaply.xyz/producto): visión general de Taply.
+- [Tarjetas digitales](https://www.gettaply.xyz/tarjetas): progreso, beneficios y una razón visible para volver.
+- [Notificaciones](https://www.gettaply.xyz/notificaciones): mensajes relevantes en el momento adecuado.
+- [Automatizaciones](https://www.gettaply.xyz/automatizaciones): continuidad sin tareas manuales diarias.
+- [Analítica](https://www.gettaply.xyz/analitica): frecuencia, activación y retorno entendible.
+
+## Industrias
+
+- [Cafeterías](https://www.gettaply.xyz/industrias/cafeterias)
+- [Restaurantes](https://www.gettaply.xyz/industrias/restaurantes)
+- [Bares](https://www.gettaply.xyz/industrias/bares)
+- [Comercios](https://www.gettaply.xyz/industrias/comercios)
+- [Panaderías](https://www.gettaply.xyz/industrias/panaderias)
+- [Eventos](https://www.gettaply.xyz/industrias/eventos)
+
+## Empresa
+
+- [Sobre Taply](https://www.gettaply.xyz/sobre): por qué la retención importa para negocios locales.
+- [Reserva una demo](https://cal.com/alan-goldstein-z1hmxl/demo-fidelio)
