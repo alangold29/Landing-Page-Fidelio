@@ -96,17 +96,15 @@ function ProblemSection() {
       className="bg-[#e8ebe4] px-5 py-20 sm:px-8 sm:py-24 md:px-12 md:py-32"
     >
       <div className="grid grid-cols-12 gap-10 md:gap-12">
-        <div className="col-span-12 md:col-span-9">
+        <div className="col-span-12 md:col-span-9 xl:col-span-12">
           <p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground sm:mb-12">
             El problema
           </p>
-          <AnimatedHeading className="font-display text-[clamp(2.25rem,5vw,4.25rem)] font-medium leading-[1.01] tracking-[-.045em]">
-            <span className="block md:whitespace-nowrap">
-              Una visita no basta para
-            </span>
+          <AnimatedHeading className="font-display text-[clamp(2.25rem,5vw,4.25rem)] font-medium leading-[1.01] tracking-[-.045em] xl:whitespace-nowrap">
+            <span>Una visita no basta para</span>{" "}
             <span className="text-muted-foreground">construir un hábito.</span>
           </AnimatedHeading>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
             El problema no es solo conseguir visitas. Es no saber cuáles vuelven
             ni tener una forma simple de darles una razón para regresar.
           </AnimatedText>
@@ -145,16 +143,15 @@ function WhatWeDo() {
       className="px-5 py-20 sm:px-8 sm:py-24 md:px-12 md:py-32"
     >
       <div className="grid grid-cols-12 gap-10 md:gap-12">
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8 xl:col-span-12">
           <p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground sm:mb-12">
             El resultado
           </p>
-          <AnimatedHeading className="font-display text-[clamp(2.25rem,10vw,3rem)] font-medium leading-[1.02] tracking-[-.035em] md:text-7xl">
-            Que tu próxima venta
-            <br />
+          <AnimatedHeading className="font-display text-[clamp(2.25rem,10vw,3rem)] font-medium leading-[1.02] tracking-[-.035em] md:text-7xl xl:whitespace-nowrap xl:text-6xl">
+            Que tu próxima venta{" "}
             <span className="text-muted-foreground">no empiece de cero.</span>
           </AnimatedHeading>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
             Taply le da a cada negocio una forma continua de reconocer a quien
             vuelve, activar su siguiente visita y aprender qué está funcionando.
           </AnimatedText>
@@ -233,7 +230,7 @@ function InstallSection() {
       className="bg-[#e8ebe4] px-5 py-20 sm:px-8 sm:py-24 md:px-12 md:py-32"
     >
       <div className="grid grid-cols-12 gap-10 md:gap-12">
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8 xl:col-span-12">
           <p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground sm:mb-12">
             Cómo empieza el hábito
           </p>
@@ -311,12 +308,11 @@ function ProgramsSection() {
           <p className="mb-12 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             Elige el motivo para volver
           </p>
-          <AnimatedHeading className="font-display text-[clamp(2.25rem,9vw,3rem)] font-medium leading-[1.02] tracking-[-.035em] md:text-[42px] xl:text-[56px]">
-            Cada negocio tiene
-            <br />
+          <AnimatedHeading className="font-display text-[clamp(2.25rem,9vw,3rem)] font-medium leading-[1.02] tracking-[-.035em] md:text-[42px] xl:whitespace-nowrap xl:text-[52px]">
+            Cada negocio tiene{" "}
             <span className="text-muted-foreground">su propio hábito.</span>
           </AnimatedHeading>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
             No se trata de repartir descuentos. Se trata de crear un siguiente
             paso que tenga sentido para la forma en que tu gente compra.
           </AnimatedText>
@@ -397,16 +393,15 @@ function ActivationSection() {
       className="bg-foreground px-8 py-32 text-white md:px-12"
     >
       <div className="grid grid-cols-12 gap-12">
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8 xl:col-span-12">
           <p className="mb-12 text-[11px] uppercase tracking-[0.2em] text-white/45">
             Más que una tarjeta
           </p>
-          <AnimatedHeading className="font-display text-5xl font-medium leading-[1.02] tracking-[-.035em] md:text-[clamp(3rem,3.3vw,3.75rem)]">
-            La relación no termina
-            <br />
+          <AnimatedHeading className="font-display text-5xl font-medium leading-[1.02] tracking-[-.035em] md:text-[clamp(3rem,3.3vw,3.75rem)] xl:whitespace-nowrap xl:text-5xl">
+            La relación no termina{" "}
             <span className="text-white/40">cuando se van.</span>
           </AnimatedHeading>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-white/50">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-white/50 xl:max-w-none xl:whitespace-nowrap">
             Taply convierte una buena experiencia en una relación que puedes
             reconocer, activar y mejorar con el tiempo.
           </AnimatedText>
@@ -483,16 +478,15 @@ function IndustriesSection() {
   return (
     <section id="industrias" className="px-8 py-32 md:px-12">
       <div className="grid grid-cols-12 gap-12">
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8 xl:col-span-12">
           <p className="mb-12 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             Taply por industria
           </p>
-          <AnimatedHeading className="font-display text-[clamp(2.25rem,8vw,2.75rem)] font-medium leading-[1.02] tracking-[-.035em] md:text-6xl">
-            Una forma de fidelizar
-            <br />
+          <AnimatedHeading className="font-display text-[clamp(2.25rem,8vw,2.75rem)] font-medium leading-[1.02] tracking-[-.035em] md:text-6xl xl:whitespace-nowrap xl:text-5xl">
+            Una forma de fidelizar{" "}
             <span className="text-muted-foreground">para cada negocio.</span>
           </AnimatedHeading>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
             Taply combina tarjeta, mensajes, automatizaciones y medición.
             Adaptamos el programa al ritmo y al momento de compra de tu negocio.
           </AnimatedText>
@@ -587,16 +581,15 @@ function ClosingSection() {
       className="bg-[#131612] px-8 py-32 text-white md:px-12 md:py-40"
     >
       <div className="grid grid-cols-12 gap-12">
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8 xl:col-span-12">
           <p className="mb-12 text-[11px] uppercase tracking-[0.2em] text-white/45">
             Empieza a aumentar la frecuencia de visita
           </p>
-          <AnimatedHeading className="font-display text-5xl font-medium leading-[1.02] tracking-[-.035em] md:text-7xl">
-            Convierte más visitas
-            <br />
+          <AnimatedHeading className="font-display text-5xl font-medium leading-[1.02] tracking-[-.035em] md:text-7xl xl:whitespace-nowrap xl:text-6xl">
+            Convierte más visitas{" "}
             <span className="text-white/40">en clientes habituales.</span>
           </AnimatedHeading>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-white/50">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-white/50 xl:max-w-none xl:whitespace-nowrap">
             Reserva una demo y descubre qué programa, campaña y métrica tienen
             más sentido para tu negocio.
           </AnimatedText>
