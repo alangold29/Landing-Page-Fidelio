@@ -5,14 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#131612" />
     <meta name="description" content="Taply crea tarjetas de fidelización digitales para Apple Wallet y Google Wallet. Haz que más clientes vuelvan a tu negocio local, sin app y sin complicar tu operación." />
-    <link rel="canonical" href="https://gettaply.xyz/" />
+    <link rel="canonical" href="https://www.gettaply.xyz/" />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_LA" />
-    <meta property="og:url" content="https://gettaply.xyz/" />
+    <meta property="og:url" content="https://www.gettaply.xyz/" />
     <meta property="og:title" content="Taply | Fidelización para negocios locales" />
     <meta property="og:description" content="Tarjetas de fidelización digitales, notificaciones y automatizaciones para aumentar la frecuencia de visita." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Taply | Fidelización para negocios locales" />
+    <meta name="twitter:description" content="Haz que más clientes vuelvan a tu negocio local, sin app y sin complicar tu operación." />
     <title>Taply | Fidelización para negocios locales</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.gettaply.xyz/#organization",
+            "name": "Taply",
+            "url": "https://www.gettaply.xyz/",
+            "description": "Fidelización digital para negocios locales mediante tarjetas en Apple Wallet y Google Wallet."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.gettaply.xyz/#website",
+            "url": "https://www.gettaply.xyz/",
+            "name": "Taply",
+            "inLanguage": "es"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Mis clientes necesitan descargar una app?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Las tarjetas viven dentro de Apple Wallet y Google Wallet. No hay nada que descargar ni otra cuenta que crear." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo reemplaza Taply una tarjeta de sellos en papel?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Cada sello o punto se actualiza cuando el equipo escanea el QR del cliente. El avance queda guardado en tiempo real y no se pierde." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Taply funciona con mi sistema de ventas?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Taply puede funcionar de forma independiente, sin cambiar nada en caja. Para operaciones más grandes se pueden evaluar integraciones con POS o CRM." }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- Mixpanel analytics and session replay -->
+    <script type="text/javascript">
+      (function (e, c) {
+        if (!c.__SV) {
+          var l, h
+          window.mixpanel = c
+          c._i = []
+          c.init = function (q, r, f) {
+            function t(d, a) {
+              var g = a.split('.')
+              if (g.length === 2) {
+                d = d[g[0]]
+                a = g[1]
+              }
+              d[a] = function () {
+                d.push([a].concat(Array.prototype.slice.call(arguments, 0)))
+              }
+            }
+            var b = c
+            if (typeof f !== 'undefined') b = c[f] = []
+            else f = 'mixpanel'
+            b.people = b.people || []
+            b.toString = function (d) {
+              var a = 'mixpanel'
+              if (f !== 'mixpanel') a += '.' + f
+              if (!d) a += ' (stub)'
+              return a
+            }
+            b.people.toString = function () { return b.toString(1) }
+            l = 'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders start_session_recording stop_session_recording people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(' ')
+            for (h = 0; h < l.length; h++) t(b, l[h])
+            var n = 'set set_once union unset remove delete'.split(' ')
+            b.get_group = function () {
+              function d(p) {
+                a[p] = function () { b.push([g, [p].concat(Array.prototype.slice.call(arguments, 0))]) }
+              }
+              var a = {}
+              var g = ['get_group'].concat(Array.prototype.slice.call(arguments, 0))
+              for (var m = 0; m < n.length; m++) d(n[m])
+              return a
+            }
+            c._i.push([q, r, f])
+          }
+          c.__SV = 1.2
+          var k = e.createElement('script')
+          k.type = 'text/javascript'
+          k.async = true
+          k.src = typeof MIXPANEL_CUSTOM_LIB_URL !== 'undefined'
+            ? MIXPANEL_CUSTOM_LIB_URL
+            : e.location.protocol === 'file:' && '//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js'.match(/^\/\//)
+              ? 'https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js'
+              : '//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js'
+          e = e.getElementsByTagName('script')[0]
+          e.parentNode.insertBefore(k, e)
+        }
+      })(document, window.mixpanel || [])
+
+      mixpanel.init('92c9416a81396b794125a1cc5e1fc407', {
+        autocapture: true,
+        record_sessions_percent: 100,
+      })
+    </script>
   </head>
   <body>
     <div id="root"></div>

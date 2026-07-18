@@ -1,25 +1,25 @@
 import { ArrowUpRight } from 'lucide-react'
 
 const productLinks = [
-  ['Ver producto', '#producto'],
-  ['Tarjetas digitales', '#tarjetas'],
-  ['Notificaciones', '#notificaciones'],
-  ['Automatizaciones', '#automatizaciones'],
-  ['Analítica', '#analitica'],
+  ['Ver producto', '/producto'],
+  ['Tarjetas digitales', '/tarjetas'],
+  ['Notificaciones', '/notificaciones'],
+  ['Automatizaciones', '/automatizaciones'],
+  ['Analítica', '/analitica'],
 ]
 
 const industryLinks = [
-  ['Cafeterías', '#industrias/cafeterias'],
-  ['Restaurantes', '#industrias/restaurantes'],
-  ['Bares', '#industrias/bares'],
-  ['Comercios', '#industrias/comercios'],
-  ['Panaderías', '#industrias/panaderias'],
-  ['Eventos', '#industrias/eventos'],
+  ['Cafeterías', '/industrias/cafeterias'],
+  ['Restaurantes', '/industrias/restaurantes'],
+  ['Bares', '/industrias/bares'],
+  ['Comercios', '/industrias/comercios'],
+  ['Panaderías', '/industrias/panaderias'],
+  ['Eventos', '/industrias/eventos'],
 ]
 
 const companyLinks = [
-  ['Sobre Taply', '#sobre'],
-  ['Preguntas frecuentes', '#faq'],
+  ['Sobre Taply', '/sobre'],
+  ['Preguntas frecuentes', '/#faq'],
   ['Reserva una demo', 'https://cal.com/alan-goldstein-z1hmxl/demo-fidelio'],
   ['hola@gettaply.xyz', 'mailto:hola@gettaply.xyz'],
 ]
@@ -28,7 +28,7 @@ export function Footer() {
   return <footer className="bg-[#0d100d] px-5 py-16 text-white sm:px-8 md:px-12 md:py-20">
     <div className="grid gap-12 border-b border-white/15 pb-14 md:grid-cols-12 md:gap-8 md:pb-20">
       <div className="md:col-span-3">
-        <a href="#home" className="font-display text-3xl font-medium tracking-[-.04em]">Taply<span className="text-[#72c888]">.</span></a>
+        <a href="/" className="font-display text-3xl font-medium tracking-[-.04em]">Taply<span className="text-[#72c888]">.</span></a>
         <p className="mt-6 max-w-[15rem] text-sm leading-relaxed text-white/50">Tarjetas de fidelización para que los negocios locales creen más frecuencia y retorno.</p>
       </div>
       <FooterColumn title="Producto" links={productLinks}/>
