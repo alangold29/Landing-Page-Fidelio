@@ -1,39 +1,484 @@
-import { ArrowUpRight, Bell, CircleGauge, WalletCards, Zap } from 'lucide-react'
-import { industryProfiles } from './industry'
-import { AnimatedHeading, AnimatedText } from '../components/AnimatedHeading'
-import { CardPlaceholder, PhoneMockup, ScenePlaceholder } from '../components/VisualPlaceholders'
-import type { ReactNode } from 'react'
+import {
+  ArrowUpRight,
+  Bell,
+  CircleGauge,
+  WalletCards,
+  Zap,
+} from "lucide-react";
+import { industryProfiles } from "./industry";
+import { AnimatedHeading, AnimatedText } from "../components/AnimatedHeading";
+import {
+  CardPlaceholder,
+  PhoneMockup,
+  ScenePlaceholder,
+} from "../components/VisualPlaceholders";
+import type { ReactNode } from "react";
 
 const industries = [
-  ['Cafeterías', 'Aumenta la frecuencia de cada visita.', 'Activa el happy hour, anuncia lo recién salido del horno o recupera a quien dejó de pasar.'],
-  ['Bares', 'Activa la próxima noche.', 'Comunica tu próximo evento o envía una razón para volver antes de que el cliente decida dónde salir.'],
-  ['Restaurantes', 'Convierte una visita en una próxima reserva.', 'Presenta un menú nuevo, llena un martes tranquilo o invita a volver a quienes ya disfrutaron tu mesa.'],
-  ['Comercios', 'Convierte compras en clientes habituales.', 'Mantén tu marca presente entre una compra y la siguiente con beneficios y campañas relevantes.'],
-  ['Panaderías', 'Convierte compras en hábito.', 'Haz visible la repetición y recupera el hábito de compra con sellos, puntos y mensajes directos.'],
-  ['Eventos', 'Un pass digital para cada acceso.', 'Actualiza horarios, salas, accesos y experiencias desde la credencial que ya tiene el asistente.'],
-]
+  [
+    "Cafeterías",
+    "Aumenta la frecuencia de cada visita.",
+    "Activa el happy hour, anuncia lo recién salido del horno o recupera a quien dejó de pasar.",
+  ],
+  [
+    "Bares",
+    "Activa la próxima noche.",
+    "Comunica tu próximo evento o envía una razón para volver antes de que el cliente decida dónde salir.",
+  ],
+  [
+    "Restaurantes",
+    "Convierte una visita en una próxima reserva.",
+    "Presenta un menú nuevo, llena un martes tranquilo o invita a volver a quienes ya disfrutaron tu mesa.",
+  ],
+  [
+    "Comercios",
+    "Convierte compras en clientes habituales.",
+    "Mantén tu marca presente entre una compra y la siguiente con beneficios y campañas relevantes.",
+  ],
+  [
+    "Panaderías",
+    "Convierte compras en hábito.",
+    "Haz visible la repetición y recupera el hábito de compra con sellos, puntos y mensajes directos.",
+  ],
+  [
+    "Eventos",
+    "Un pass digital para cada acceso.",
+    "Actualiza horarios, salas, accesos y experiencias desde la credencial que ya tiene el asistente.",
+  ],
+];
 
 export function ProductPage() {
   const capabilities = [
-    { number: '01', label: 'Tarjetas digitales', text: 'Tu programa vive en Apple Wallet y Google Wallet, listo para cada visita.', href: '/tarjetas', icon: WalletCards },
-    { number: '02', label: 'Notificaciones', text: 'Una razón relevante para volver aparece en el momento adecuado.', href: '/notificaciones', icon: Bell },
-    { number: '03', label: 'Automatizaciones', text: 'Reglas simples convierten una acción del cliente en un siguiente paso.', href: '/automatizaciones', icon: Zap },
-    { number: '04', label: 'Analítica', text: 'Entiende qué beneficios y campañas realmente construyen frecuencia.', href: '/analitica', icon: CircleGauge },
-  ]
-  return <PageShell eyebrow="Producto / Taply" title={<>La tarjeta es el medio.<br/><span>Hacer que vuelvan</span><br/>es el resultado.</>} intro="Un sistema de fidelización para negocios locales que quieren dejar de depender únicamente de la próxima venta y construir una frecuencia de compra medible.">
-    <section className="grid grid-cols-12 items-center gap-10 border-t border-border pt-16 md:gap-12 md:pt-20"><div className="col-span-12 md:col-span-5"><figure className="overflow-hidden rounded-[28px]"><img className="aspect-[4/5] h-full w-full object-cover" src="/images/fidelio-product-tarjetas.webp" alt="Clienta usando su teléfono después de comprar en una cafetería local"/></figure></div><div className="col-span-12 md:col-span-6 md:col-start-7"><p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Una base simple</p><h2 className="mt-7 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em]">Tu marca en el celular.<br/><span className="text-muted-foreground">El siguiente paso, listo.</span></h2><p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">Taply conecta tarjeta, mensajes, automatizaciones y medición. Todo empieza con una visita y una razón clara para que la siguiente ocurra.</p><div className="mt-10 flex justify-center md:justify-start"><PhoneMockup label="Tarjeta Taply en Apple Wallet"/></div></div></section>
-    <section className="mt-20 border-t border-border pt-12 md:mt-28 md:pt-16"><div className="max-w-2xl"><p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Conoce el producto</p><h2 className="mt-6 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em]">Cuatro capacidades.<br/><span className="text-muted-foreground">Una relación que sigue.</span></h2></div><div className="mt-12 grid grid-cols-1 gap-3 md:grid-cols-2">{capabilities.map(({ number, label, text, href, icon: Icon }) => <a key={label} href={href} className="group rounded-[22px] border border-border p-7 transition hover:border-foreground/35 md:p-9"><div className="flex items-center justify-between"><span className="text-xs text-muted-foreground">{number}</span><Icon className="h-5 w-5 text-[#2c8f58]" strokeWidth={1.5}/></div><h3 className="mt-16 text-2xl font-medium tracking-[-.03em]">{label}</h3><p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">{text}</p><span className="mt-8 inline-flex items-center gap-2 text-sm font-medium">Ver {label.toLowerCase()} <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5"/></span></a>)}</div></section>
-    <section className="mt-20 grid grid-cols-1 gap-4 md:mt-28 md:grid-cols-3"><CardPlaceholder label="Tarjeta de sellos" detail="Recompensa visitas recurrentes" tone="mint"/><CardPlaceholder label="Tarjeta por puntos" detail="Acumula y canjea según tus reglas" tone="blue"/><CardPlaceholder label="Tarjeta de evento" detail="Actualiza cada acceso o experiencia" tone="sand"/></section>
-    <section className="mt-20 grid grid-cols-1 gap-3 md:mt-28 md:grid-cols-3"><CapabilityBlock number="01" title="Sin app" text="El cliente no descarga nada ni crea otra cuenta para participar."/><CapabilityBlock number="02" title="Siempre disponible" text="El pass vive en el teléfono, se actualiza y puede restaurarse."/><CapabilityBlock number="03" title="Operación simple" text="Puedes comenzar con un QR sin cambiar todo tu sistema de ventas."/></section>
-  </PageShell>
+    {
+      number: "01",
+      label: "Tarjetas digitales",
+      text: "Tu programa vive en Apple Wallet y Google Wallet, listo para cada visita.",
+      href: "/tarjetas",
+      icon: WalletCards,
+    },
+    {
+      number: "02",
+      label: "Notificaciones",
+      text: "Una razón relevante para volver aparece en el momento adecuado.",
+      href: "/notificaciones",
+      icon: Bell,
+    },
+    {
+      number: "03",
+      label: "Automatizaciones",
+      text: "Reglas simples convierten una acción del cliente en un siguiente paso.",
+      href: "/automatizaciones",
+      icon: Zap,
+    },
+    {
+      number: "04",
+      label: "Analítica",
+      text: "Entiende qué beneficios y campañas realmente construyen frecuencia.",
+      href: "/analitica",
+      icon: CircleGauge,
+    },
+  ];
+  return (
+    <PageShell
+      eyebrow="Producto / Taply"
+      title={
+        <>
+          La tarjeta es el medio.
+          <br />
+          <span>Hacer que vuelvan</span>
+          <br />
+          es el resultado.
+        </>
+      }
+      intro="Un sistema de fidelización para negocios locales que quieren dejar de depender únicamente de la próxima venta y construir una frecuencia de compra medible."
+    >
+      <section className="grid grid-cols-12 items-center gap-10 border-t border-border pt-16 md:gap-12 md:pt-20">
+        <div className="col-span-12 md:col-span-5">
+          <figure className="overflow-hidden rounded-[28px]">
+            <img
+              className="aspect-[4/5] h-full w-full object-cover"
+              src="/images/fidelio-product-tarjetas.webp"
+              alt="Clienta usando su teléfono después de comprar en una cafetería local"
+            />
+          </figure>
+        </div>
+        <div className="col-span-12 md:col-span-6 md:col-start-7">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+            Una base simple
+          </p>
+          <h2 className="mt-7 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em]">
+            Tu marca en el celular.
+            <br />
+            <span className="text-muted-foreground">
+              El siguiente paso, listo.
+            </span>
+          </h2>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+            Taply conecta tarjeta, mensajes, automatizaciones y medición. Todo
+            empieza con una visita y una razón clara para que la siguiente
+            ocurra.
+          </p>
+          <div className="mt-10 flex justify-center md:justify-start">
+            <PhoneMockup label="Tarjeta Taply en Apple Wallet" />
+          </div>
+        </div>
+      </section>
+      <section className="mt-20 border-t border-border pt-12 md:mt-28 md:pt-16">
+        <div className="max-w-2xl">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+            Conoce el producto
+          </p>
+          <h2 className="mt-6 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em]">
+            Cuatro capacidades.
+            <br />
+            <span className="text-muted-foreground">
+              Una relación que sigue.
+            </span>
+          </h2>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-3 md:grid-cols-2">
+          {capabilities.map(({ number, label, text, href, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              className="group rounded-[22px] border border-border p-7 transition hover:border-foreground/35 md:p-9"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-muted-foreground">{number}</span>
+                <Icon className="h-5 w-5 text-[#2c8f58]" strokeWidth={1.5} />
+              </div>
+              <h3 className="mt-16 text-2xl font-medium tracking-[-.03em]">
+                {label}
+              </h3>
+              <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                {text}
+              </p>
+              <span className="mt-8 inline-flex items-center gap-2 text-sm font-medium">
+                Ver {label.toLowerCase()}{" "}
+                <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+      <section className="mt-20 grid grid-cols-1 gap-4 md:mt-28 md:grid-cols-3">
+        <CardPlaceholder
+          label="Tarjeta de sellos"
+          detail="Recompensa visitas recurrentes"
+          tone="mint"
+        />
+        <CardPlaceholder
+          label="Tarjeta por puntos"
+          detail="Acumula y canjea según tus reglas"
+          tone="blue"
+        />
+        <CardPlaceholder
+          label="Tarjeta de evento"
+          detail="Actualiza cada acceso o experiencia"
+          tone="sand"
+        />
+      </section>
+      <section className="mt-20 grid grid-cols-1 gap-3 md:mt-28 md:grid-cols-3">
+        <CapabilityBlock
+          number="01"
+          title="Sin app"
+          text="El cliente no descarga nada ni crea otra cuenta para participar."
+        />
+        <CapabilityBlock
+          number="02"
+          title="Siempre disponible"
+          text="El pass vive en el teléfono, se actualiza y puede restaurarse."
+        />
+        <CapabilityBlock
+          number="03"
+          title="Operación simple"
+          text="Puedes comenzar con un QR sin cambiar todo tu sistema de ventas."
+        />
+      </section>
+    </PageShell>
+  );
 }
 
-function Capability({ icon: Icon, text }: { icon: typeof WalletCards; text: string }) { return <div className="flex items-center gap-3"><Icon className="h-4 w-4 text-foreground" strokeWidth={1.5}/>{text}</div> }
-function CapabilityBlock({ number, title, text }: { number: string; title: string; text: string }) { return <div className="border-t border-border p-8 md:p-10"><span className="text-xs text-muted-foreground">({number})</span><h3 className="mt-20 text-2xl font-medium">{title}</h3><p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">{text}</p></div> }
+function Capability({
+  icon: Icon,
+  text,
+}: {
+  icon: typeof WalletCards;
+  text: string;
+}) {
+  return (
+    <div className="flex items-center gap-3">
+      <Icon className="h-4 w-4 text-foreground" strokeWidth={1.5} />
+      {text}
+    </div>
+  );
+}
+function CapabilityBlock({
+  number,
+  title,
+  text,
+}: {
+  number: string;
+  title: string;
+  text: string;
+}) {
+  return (
+    <div className="border-t border-border p-8 md:p-10">
+      <span className="text-xs text-muted-foreground">({number})</span>
+      <h3 className="mt-20 text-2xl font-medium">{title}</h3>
+      <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
+        {text}
+      </p>
+    </div>
+  );
+}
 
-const features = [{ icon: Bell, eyebrow: '01 / Notificaciones', title: 'Envía el mensaje adecuado en el momento adecuado.', text: 'Envía notificaciones instantáneas, programadas o basadas en ubicación para llegar directamente a la pantalla de bloqueo de tus clientes.', examples: ['“Hoy el segundo café va por la casa.”', '“Happy hour de 18:00 a 20:00.”', '“Estás cerca. Tu beneficio sigue activo.”'] }, { icon: Zap, eyebrow: '02 / Automatizaciones', title: 'Automatiza tu marketing con un solo toque.', text: 'Configura reglas basadas en acciones reales y deja que Taply active el siguiente contacto sin trabajo diario de tu equipo.', examples: ['Después de la tercera visita → recompensa', '30 días sin visita → razón concreta para volver', 'Cliente cerca → beneficio relevante'] }, { icon: CircleGauge, eyebrow: '03 / Analítica completa', title: 'Mide tu éxito y comprueba cómo vuelven.', text: 'Un dashboard para entender el crecimiento del programa y decidir qué hacer con cada segmento de clientes.', examples: ['Quién está regresando', 'Qué campaña genera más visitas', 'Qué recompensa se canjea más'] }]
-export function FeaturesPage() { return <PageShell eyebrow="Producto / Activación" title={<>El Wallet también<br/><span>hace el trabajo.</span></>} intro="La tarjeta es el punto de entrada. Las notificaciones activan el regreso, las automatizaciones sostienen la relación y la analítica conecta las acciones con el retorno."><div className="mb-20 grid grid-cols-12 items-center gap-12 border-t border-border pt-20"><div className="col-span-12 md:col-span-5"><PhoneMockup variant="notification" label="Notificación de Taply en Wallet"/></div><div className="col-span-12 md:col-span-5 md:col-start-8"><p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">La tarjeta es el medio</p><h2 className="mt-8 text-4xl font-medium leading-tight">El mensaje aparece cuando todavía se puede decidir.</h2><p className="mt-6 text-base leading-relaxed text-muted-foreground">Este espacio se personaliza con la notificación, oferta o recordatorio que mejor active el regreso a cada negocio.</p></div></div><div className="grid gap-5">{features.map(({ icon: Icon, eyebrow, title, text, examples }, i) => <section key={eyebrow} className={`grid grid-cols-12 gap-10 rounded-[28px] p-8 md:p-12 ${i % 2 ? 'bg-[#e8ebe4]' : 'bg-foreground text-white'}`}><div className="col-span-12 md:col-span-5"><Icon className={`h-6 w-6 ${i % 2 ? 'text-foreground' : 'text-white'}`} strokeWidth={1.5}/><p className={`mt-16 text-[11px] uppercase tracking-[0.2em] ${i % 2 ? 'text-muted-foreground' : 'text-white/45'}`}>{eyebrow}</p><h2 className="mt-5 text-4xl font-medium leading-tight tracking-[-.03em] md:text-5xl">{title}</h2></div><div className="col-span-12 md:col-span-5 md:col-start-8 md:self-end"><p className={`text-base leading-relaxed ${i % 2 ? 'text-muted-foreground' : 'text-white/55'}`}>{text}</p><div className={`mt-8 border-t pt-5 text-sm leading-loose ${i % 2 ? 'border-foreground/15 text-foreground/65' : 'border-white/15 text-white/55'}`}>{examples.map(example => <p key={example}>{example}</p>)}</div></div></section>)}</div><div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-2"><ScenePlaceholder label="Foto por incorporar" detail="Cliente real recibiendo una notificación de su negocio" tone="dark"/><ScenePlaceholder label="Dashboard por incorporar" detail="Captura de métricas y retorno del programa"/></div></PageShell> }
+const features = [
+  {
+    icon: Bell,
+    eyebrow: "01 / Notificaciones",
+    title: "Envía el mensaje adecuado en el momento adecuado.",
+    text: "Envía notificaciones instantáneas, programadas o basadas en ubicación para llegar directamente a la pantalla de bloqueo de tus clientes.",
+    examples: [
+      "“Hoy el segundo café va por la casa.”",
+      "“Happy hour de 18:00 a 20:00.”",
+      "“Estás cerca. Tu beneficio sigue activo.”",
+    ],
+  },
+  {
+    icon: Zap,
+    eyebrow: "02 / Automatizaciones",
+    title: "Automatiza tu marketing con un solo toque.",
+    text: "Configura reglas basadas en acciones reales y deja que Taply active el siguiente contacto sin trabajo diario de tu equipo.",
+    examples: [
+      "Después de la tercera visita → recompensa",
+      "30 días sin visita → razón concreta para volver",
+      "Cliente cerca → beneficio relevante",
+    ],
+  },
+  {
+    icon: CircleGauge,
+    eyebrow: "03 / Analítica completa",
+    title: "Mide tu éxito y comprueba cómo vuelven.",
+    text: "Un dashboard para entender el crecimiento del programa y decidir qué hacer con cada segmento de clientes.",
+    examples: [
+      "Quién está regresando",
+      "Qué campaña genera más visitas",
+      "Qué recompensa se canjea más",
+    ],
+  },
+];
+export function FeaturesPage() {
+  return (
+    <PageShell
+      eyebrow="Producto / Activación"
+      title={
+        <>
+          El Wallet también
+          <br />
+          <span>hace el trabajo.</span>
+        </>
+      }
+      intro="La tarjeta es el punto de entrada. Las notificaciones activan el regreso, las automatizaciones sostienen la relación y la analítica conecta las acciones con el retorno."
+    >
+      <div className="mb-20 grid grid-cols-12 items-center gap-12 border-t border-border pt-20">
+        <div className="col-span-12 md:col-span-5">
+          <PhoneMockup
+            variant="notification"
+            label="Notificación de Taply en Wallet"
+          />
+        </div>
+        <div className="col-span-12 md:col-span-5 md:col-start-8">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+            La tarjeta es el medio
+          </p>
+          <h2 className="mt-8 text-4xl font-medium leading-tight">
+            El mensaje aparece cuando todavía se puede decidir.
+          </h2>
+          <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+            Este espacio se personaliza con la notificación, oferta o
+            recordatorio que mejor active el regreso a cada negocio.
+          </p>
+        </div>
+      </div>
+      <div className="grid gap-5">
+        {features.map(({ icon: Icon, eyebrow, title, text, examples }, i) => (
+          <section
+            key={eyebrow}
+            className={`grid grid-cols-12 gap-10 rounded-[28px] p-8 md:p-12 ${i % 2 ? "bg-[#e8ebe4]" : "bg-foreground text-white"}`}
+          >
+            <div className="col-span-12 md:col-span-5">
+              <Icon
+                className={`h-6 w-6 ${i % 2 ? "text-foreground" : "text-white"}`}
+                strokeWidth={1.5}
+              />
+              <p
+                className={`mt-16 text-[11px] uppercase tracking-[0.2em] ${i % 2 ? "text-muted-foreground" : "text-white/45"}`}
+              >
+                {eyebrow}
+              </p>
+              <h2 className="mt-5 text-4xl font-medium leading-tight tracking-[-.03em] md:text-5xl">
+                {title}
+              </h2>
+            </div>
+            <div className="col-span-12 md:col-span-5 md:col-start-8 md:self-end">
+              <p
+                className={`text-base leading-relaxed ${i % 2 ? "text-muted-foreground" : "text-white/55"}`}
+              >
+                {text}
+              </p>
+              <div
+                className={`mt-8 border-t pt-5 text-sm leading-loose ${i % 2 ? "border-foreground/15 text-foreground/65" : "border-white/15 text-white/55"}`}
+              >
+                {examples.map((example) => (
+                  <p key={example}>{example}</p>
+                ))}
+              </div>
+            </div>
+          </section>
+        ))}
+      </div>
+      <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <ScenePlaceholder
+          label="Foto por incorporar"
+          detail="Cliente real recibiendo una notificación de su negocio"
+          tone="dark"
+        />
+        <ScenePlaceholder
+          label="Dashboard por incorporar"
+          detail="Captura de métricas y retorno del programa"
+        />
+      </div>
+    </PageShell>
+  );
+}
 
-export function IndustriesPage() { return <PageShell eyebrow="Taply / Industrias" title={<>Una lógica de producto.<br/><span>Distintos momentos</span><br/>de consumo.</>} intro="La estructura se mantiene: tarjeta, comunicación, automatización y medición. Lo que cambia es la frecuencia, el momento y la operación de cada negocio."><div className="grid grid-cols-1 border-t border-border md:grid-cols-2">{industries.map(([name, promise, text], i) => { const slug = Object.entries(industryProfiles).find(([, profile]) => profile.label === name)?.[0]; return <a key={name} href={`/industrias/${slug}`} className="group border-b border-border py-10 md:pr-12"><div className="flex items-start gap-6"><span className="text-xs text-muted-foreground">0{i + 1}</span><div className="flex-1"><div className="flex items-center justify-between gap-6"><h2 className="text-3xl font-medium tracking-[-.025em]">{name}</h2><ArrowUpRight className="h-5 w-5 text-muted-foreground transition group-hover:-translate-y-1 group-hover:translate-x-1"/></div><p className="mt-4 text-lg text-foreground/75">{promise}</p><p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">{text}</p><div className="mt-7 flex flex-wrap gap-2"><span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">Tarjeta</span><span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">Activación</span><span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">Retorno</span></div></div></div></a> })}</div><div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-3"><ScenePlaceholder label="Cafetería / caja" detail="Una clienta activa su tarjeta en el punto de venta" src="/images/taply-industries-cafeteria.webp" alt="Barista y clienta en una cafetería local junto a un código QR"/><ScenePlaceholder label="Restaurante / mesa" detail="Una visita se convierte en una próxima ocasión" src="/images/taply-industries-restaurante.webp" alt="Dos clientas revisando una tarjeta digital en un restaurante local"/><ScenePlaceholder label="Evento / acceso" detail="Un pass digital que simplifica la entrada" src="/images/taply-industries-evento.webp" alt="Host y asistente validando una entrada digital en un evento local"/></div><section className="mt-24 grid grid-cols-12 items-center gap-12 border-t border-border pt-20"><div className="col-span-12 md:col-span-5"><p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Para cualquier momento de consumo</p><h2 className="mt-8 text-4xl font-medium leading-tight">Más frecuencia.<br/><span className="text-muted-foreground">Más retorno.</span></h2></div><div className="col-span-12 md:col-span-5 md:col-start-8"><p className="text-base leading-relaxed text-muted-foreground">Taply no promete una cifra universal. Ayuda a cada negocio a descubrir qué oferta, campaña y momento generan más regreso.</p></div></section></PageShell> }
+export function IndustriesPage() {
+  return (
+    <PageShell
+      eyebrow="Taply / Industrias"
+      title={
+        <>
+          Una lógica de producto.
+          <br />
+          <span>Distintos momentos</span>
+          <br />
+          de consumo.
+        </>
+      }
+      intro="La estructura se mantiene: tarjeta, comunicación, automatización y medición. Lo que cambia es la frecuencia, el momento y la operación de cada negocio."
+    >
+      <div className="grid grid-cols-1 border-t border-border md:grid-cols-2">
+        {industries.map(([name, promise, text], i) => {
+          const slug = Object.entries(industryProfiles).find(
+            ([, profile]) => profile.label === name,
+          )?.[0];
+          return (
+            <a
+              key={name}
+              href={`/industrias/${slug}`}
+              className="group border-b border-border py-10 md:pr-12"
+            >
+              <div className="flex items-start gap-6">
+                <span className="text-xs text-muted-foreground">0{i + 1}</span>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between gap-6">
+                    <h2 className="text-3xl font-medium tracking-[-.025em]">
+                      {name}
+                    </h2>
+                    <ArrowUpRight className="h-5 w-5 text-muted-foreground transition group-hover:-translate-y-1 group-hover:translate-x-1" />
+                  </div>
+                  <p className="mt-4 text-lg text-foreground/75">{promise}</p>
+                  <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
+                    {text}
+                  </p>
+                  <div className="mt-7 flex flex-wrap gap-2">
+                    <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                      Tarjeta
+                    </span>
+                    <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                      Activación
+                    </span>
+                    <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                      Retorno
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+      <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <ScenePlaceholder
+          label="Cafetería / caja"
+          detail="Una clienta activa su tarjeta en el punto de venta"
+          src="/images/taply-industries-cafeteria.webp"
+          alt="Barista y clienta en una cafetería local junto a un código QR"
+        />
+        <ScenePlaceholder
+          label="Restaurante / mesa"
+          detail="Una visita se convierte en una próxima ocasión"
+          src="/images/taply-industries-restaurante.webp"
+          alt="Dos clientas revisando una tarjeta digital en un restaurante local"
+        />
+        <ScenePlaceholder
+          label="Evento / acceso"
+          detail="Un pass digital que simplifica la entrada"
+          src="/images/taply-industries-evento.webp"
+          alt="Host y asistente validando una entrada digital en un evento local"
+        />
+      </div>
+      <section className="mt-24 grid grid-cols-12 gap-12 border-t border-border pt-20">
+        <div className="col-span-12 md:col-span-8">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+            Para cualquier momento de consumo
+          </p>
+          <h2 className="mt-8 text-4xl font-medium leading-tight">
+            Más frecuencia.
+            <br />
+            <span className="text-muted-foreground">Más retorno.</span>
+          </h2>
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            Taply no promete una cifra universal. Ayuda a cada negocio a
+            descubrir qué oferta, campaña y momento generan más regreso.
+          </AnimatedText>
+        </div>
+      </section>
+    </PageShell>
+  );
+}
 
-function PageShell({ eyebrow, title, intro, children }: { eyebrow: string; title: ReactNode; intro: string; children: ReactNode }) { return <main className="min-h-screen bg-background px-5 pb-20 pt-28 sm:px-8 md:px-12 md:pb-32 md:pt-36"><div className="grid grid-cols-12 gap-10 pb-16 md:gap-12 md:pb-28"><div className="col-span-12 md:col-span-8"><p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:mb-10">{eyebrow}</p><AnimatedHeading as="h1" className="font-display text-[clamp(2.25rem,10vw,3rem)] font-medium leading-[1.01] tracking-[-.04em] md:text-6xl">{title}</AnimatedHeading></div><AnimatedText className="col-span-12 self-end text-base leading-relaxed text-muted-foreground md:col-span-4 md:col-start-9 md:pb-2">{intro}</AnimatedText></div>{children}</main> }
+function PageShell({
+  eyebrow,
+  title,
+  intro,
+  children,
+}: {
+  eyebrow: string;
+  title: ReactNode;
+  intro: string;
+  children: ReactNode;
+}) {
+  return (
+    <main className="min-h-screen bg-background px-5 pb-20 pt-28 sm:px-8 md:px-12 md:pb-32 md:pt-36">
+      <div className="grid grid-cols-12 gap-10 pb-16 md:gap-12 md:pb-28">
+        <div className="col-span-12 md:col-span-8">
+          <p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:mb-10">
+            {eyebrow}
+          </p>
+          <AnimatedHeading
+            as="h1"
+            className="font-display text-[clamp(2.25rem,10vw,3rem)] font-medium leading-[1.01] tracking-[-.04em] md:text-6xl"
+          >
+            {title}
+          </AnimatedHeading>
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            {intro}
+          </AnimatedText>
+        </div>
+      </div>
+      {children}
+    </main>
+  );
+}
