@@ -25,19 +25,18 @@ export function AboutPage() {
     <main className="bg-background pt-28 sm:pt-32">
       <section className="px-5 pb-20 sm:px-8 md:px-12 md:pb-32">
         <div className="grid grid-cols-12 gap-10 md:gap-12">
-          <div className="col-span-12 md:col-span-8">
+          <div className="col-span-12 md:col-span-8 xl:col-span-12">
             <p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
               Sobre Taply
             </p>
             <AnimatedHeading
               as="h1"
-              className="font-display text-[clamp(2.6rem,6.8vw,5rem)] font-medium leading-[.96] tracking-[-.05em]"
+              className="font-display text-[clamp(2.6rem,6.8vw,5rem)] font-medium leading-[.96] tracking-[-.05em] xl:whitespace-nowrap xl:text-[4.5rem]"
             >
-              Los clientes no vuelven
-              <br />
+              Los clientes no vuelven{" "}
               <span className="text-muted-foreground">por accidente.</span>
             </AnimatedHeading>
-            <AnimatedText className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <AnimatedText className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
               Un negocio local crece cuando una buena experiencia encuentra una
               razón concreta para repetirse.
             </AnimatedText>
@@ -70,18 +69,17 @@ export function AboutPage() {
 
       <section className="bg-foreground px-5 py-20 text-white sm:px-8 md:px-12 md:py-32">
         <div className="grid grid-cols-12 gap-10 md:gap-12">
-          <div className="col-span-12 md:col-span-8">
+          <div className="col-span-12 md:col-span-8 xl:col-span-12">
             <p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-white/45">
               Por qué existimos
             </p>
-            <AnimatedHeading className="font-display text-[clamp(2.35rem,7vw,5.2rem)] font-medium leading-[.98] tracking-[-.045em]">
-              Los negocios a los que la gente vuelve
-              <br />
+            <AnimatedHeading className="font-display text-[clamp(2.35rem,7vw,5.2rem)] font-medium leading-[.98] tracking-[-.045em] xl:whitespace-nowrap xl:text-[4rem]">
+              Los negocios a los que la gente vuelve{" "}
               <span className="text-white/40">
                 son los que mueven un barrio.
               </span>
             </AnimatedHeading>
-            <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-white/55">
+            <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-white/55 xl:max-w-none xl:whitespace-nowrap">
               El café que sabe tu pedido. El restaurante al que llevas a alguien
               importante. La panadería que forma parte de tu rutina. Taply
               existe para ayudar a que esas relaciones no se enfríen al salir

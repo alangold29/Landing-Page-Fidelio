@@ -39,9 +39,7 @@ const profiles: Record<FeatureSlug, FeatureProfile> = {
     eyebrow: "Producto / Tarjetas digitales",
     title: (
       <>
-        Una tarjeta.
-        <br />
-        <span>Más visitas.</span>
+        Una tarjeta. <span>Más visitas.</span>
       </>
     ),
     intro:
@@ -91,9 +89,7 @@ const profiles: Record<FeatureSlug, FeatureProfile> = {
     eyebrow: "Producto / Notificaciones",
     title: (
       <>
-        Un mensaje.
-        <br />
-        <span>Justo a tiempo.</span>
+        Un mensaje. <span>Justo a tiempo.</span>
       </>
     ),
     intro:
@@ -144,9 +140,7 @@ const profiles: Record<FeatureSlug, FeatureProfile> = {
     eyebrow: "Producto / Automatizaciones",
     title: (
       <>
-        El próximo paso.
-        <br />
-        <span>Sin acordarte.</span>
+        El próximo paso. <span>Sin acordarte.</span>
       </>
     ),
     intro:
@@ -197,9 +191,7 @@ const profiles: Record<FeatureSlug, FeatureProfile> = {
     eyebrow: "Producto / Analítica",
     title: (
       <>
-        Decide mejor.
-        <br />
-        <span>Haz que vuelvan.</span>
+        Decide mejor. <span>Haz que vuelvan.</span>
       </>
     ),
     intro:
@@ -305,17 +297,17 @@ export function FeatureLandingPage({ slug }: { slug: FeatureSlug }) {
   return (
     <main className="min-h-screen bg-background px-5 pb-20 pt-28 sm:px-8 md:px-12 md:pb-32 md:pt-36">
       <section className="grid grid-cols-12 gap-10 pb-16 md:gap-12 md:pb-28">
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8 xl:col-span-12">
           <p className="mb-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             {feature.eyebrow}
           </p>
           <AnimatedHeading
             as="h1"
-            className="font-display text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[.98] tracking-[-.045em]"
+            className="font-display text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[.98] tracking-[-.045em] xl:whitespace-nowrap xl:text-[3.5rem]"
           >
             {feature.title}
           </AnimatedHeading>
-          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <AnimatedText className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground xl:max-w-none xl:whitespace-nowrap">
             {feature.intro}
           </AnimatedText>
         </div>
@@ -384,9 +376,8 @@ export function FeatureLandingPage({ slug }: { slug: FeatureSlug }) {
             <p className="text-[11px] uppercase tracking-[0.2em] text-white/45">
               Casos de uso
             </p>
-            <h2 className="mt-7 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em]">
-              Una función.
-              <br />
+            <h2 className="mt-7 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em] xl:whitespace-nowrap xl:text-[3rem]">
+              Una función.{" "}
               <span className="text-white/40">Distintos momentos.</span>
             </h2>
           </div>
@@ -409,10 +400,8 @@ export function FeatureLandingPage({ slug }: { slug: FeatureSlug }) {
           <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             Taply / {feature.label}
           </p>
-          <h2 className="mt-5 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em]">
-            Diseñemos el próximo
-            <br />
-            motivo para volver.
+          <h2 className="mt-5 font-display text-[clamp(2.25rem,4vw,4rem)] font-medium leading-[1] tracking-[-.04em] xl:whitespace-nowrap xl:text-[3rem]">
+            Diseñemos el próximo motivo para volver.
           </h2>
         </div>
         <a
