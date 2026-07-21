@@ -22,6 +22,7 @@ import { FeaturesPage, IndustriesPage, ProductPage } from "./pages";
 import { IndustryLandingPage, isIndustrySlug } from "./industry";
 import { AboutPage } from "./about";
 import { FeatureLandingPage, isFeatureSlug } from "./feature";
+import { SupportPage } from "./support";
 
 function Hero() {
   return (
@@ -660,6 +661,10 @@ const seoPages: Record<string, { title: string; description: string }> = {
     description:
       "Conoce por qué Taply ayuda a los negocios locales a construir relaciones que vuelven.",
   },
+  "/soporte": {
+    title: "Soporte | Taply",
+    description: "Contacta al equipo de Taply por correo electrónico.",
+  },
 };
 
 function currentRoute() {
@@ -719,6 +724,7 @@ function App() {
         "/features",
         "/industrias",
         "/sobre",
+        "/soporte",
       ].includes(normalizedRoute) ||
       normalizedRoute.startsWith("/industrias/") ||
       isFeatureSlug(featureSlug)
@@ -727,7 +733,9 @@ function App() {
   }, [featureSlug, normalizedRoute]);
 
   const page =
-    normalizedRoute === "/sobre" ? (
+    normalizedRoute === "/soporte" ? (
+      <SupportPage />
+    ) : normalizedRoute === "/sobre" ? (
       <AboutPage />
     ) : normalizedRoute === "/producto" ? (
       <ProductPage />

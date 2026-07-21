@@ -20,8 +20,9 @@ const industryLinks = [
 const companyLinks = [
   ['Sobre Taply', '/sobre'],
   ['Preguntas frecuentes', '/#faq'],
+  ['Soporte', '/soporte'],
   ['Reserva una demo', 'https://cal.com/alan-goldstein-z1hmxl/demo-fidelio'],
-  ['hola@gettaply.xyz', 'mailto:hola@gettaply.xyz'],
+  ['contacto@gettaply.xyz', 'mailto:contacto@gettaply.xyz'],
 ]
 
 export function Footer() {
