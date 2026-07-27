@@ -23,6 +23,8 @@ import { IndustryLandingPage, isIndustrySlug } from "./industry";
 import { AboutPage } from "./about";
 import { FeatureLandingPage, isFeatureSlug } from "./feature";
 import { SupportPage } from "./support";
+import { getLocale, getPagePath } from "../i18n";
+import { LocaleProvider } from "../components/LocaleProvider";
 
 function Hero() {
   return (
@@ -668,9 +670,8 @@ const seoPages: Record<string, { title: string; description: string }> = {
 };
 
 function currentRoute() {
-  return window.location.pathname === "/"
-    ? window.location.hash || "#home"
-    : window.location.pathname.replace(/\/$/, "");
+  const path = getPagePath();
+  return path === "/" ? "#home" : path;
 }
 
 function App() {
@@ -692,7 +693,23 @@ function App() {
 
   useEffect(() => {
     const seo = seoPages[normalizedRoute] ?? seoPages["#home"];
-    const url = `https://www.gettaply.xyz${normalizedRoute === "/home" ? "/" : normalizedRoute}`;
+    const pagePath = normalizedRoute === "/home" ? "/" : normalizedRoute;
+    const localePrefix = getLocale() === "pt" ? "/pt" : "";
+    const url = `https://www.gettaply.xyz${localePrefix}${pagePath}`;
+    const alternates = [
+      ["es", `https://www.gettaply.xyz${pagePath}`],
+      ["pt-BR", `https://www.gettaply.xyz/pt${pagePath}`],
+    ] as const;
+    alternates.forEach(([language, href]) => {
+      let alternate = document.querySelector(`link[rel="alternate"][hreflang="${language}"]`) as HTMLLinkElement | null;
+      if (!alternate) {
+        alternate = document.createElement("link");
+        alternate.rel = "alternate";
+        alternate.hreflang = language;
+        document.head.appendChild(alternate);
+      }
+      alternate.href = href;
+    });
     document.title = seo.title;
     document
       .querySelector('meta[name="description"]')
@@ -762,11 +779,13 @@ function App() {
     );
 
   return (
-    <div className="bg-background text-foreground">
-      <Header />
-      {page}
-      <Footer />
-    </div>
+    <LocaleProvider>
+      <div className="bg-background text-foreground">
+        <Header />
+        {page}
+        <Footer />
+      </div>
+    </LocaleProvider>
   );
 }
 
