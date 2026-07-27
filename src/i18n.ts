@@ -316,6 +316,17 @@ const exactTranslations: Record<string, string> = {
   "Dashboard en construcción.": "Dashboard em construção.",
   "Este espacio recibirá el dashboard de Taply con métricas de visitas, campañas y retorno.": "Este espaço receberá o dashboard da Taply com métricas de visitas, campanhas e retorno.",
   "Próximo visual de producto": "Próximo visual do produto",
+  "Cada visita deja una oportunidad para la siguiente. Un beneficio, un recordatorio o un gesto oportuno puede convertir una buena experiencia en una costumbre.": "Cada visita deixa uma oportunidade para a próxima. Um benefício, um lembrete ou um gesto oportuno pode transformar uma boa experiência em um hábito.",
+  "Si exige otra app, otra contraseña o una operación más compleja en caja, termina siendo una barrera. Por eso Taply vive donde el cliente ya guarda lo importante.": "Se exige outro app, outra senha ou uma operação mais complexa no caixa, acaba sendo uma barreira. Por isso a Taply vive onde o cliente já guarda o que importa.",
+  "Taply no reemplaza la cercanía de un negocio local. La hace más fácil de sostener entre una visita y la siguiente.": "A Taply não substitui a proximidade de um negócio local. Ela torna essa relação mais fácil de manter entre uma visita e a próxima.",
+  "El café que sabe tu pedido. El restaurante al que llevas a alguien importante. La panadería que forma parte de tu rutina. Taply existe para ayudar a que esas relaciones no se enfríen al salir por la puerta.": "O café que sabe o seu pedido. O restaurante para onde você leva alguém importante. A padaria que faz parte da sua rotina. A Taply existe para ajudar essas relações a não esfriarem quando a pessoa sai pela porta.",
+  "Por eso no construimos otra app que el cliente debe recordar descargar. Creamos una tarjeta que vive en su Wallet, se actualiza con cada visita y mantiene al negocio presente sin añadir fricción.": "Por isso não construímos outro app que o cliente precisa lembrar de baixar. Criamos um cartão que vive na Wallet, é atualizado a cada visita e mantém o negócio presente sem adicionar fricção.",
+  "Sin tarjetas de papel que se pierden.": "Sem cartões de papel que se perdem.",
+  "Sin otra app ni otra cuenta.": "Sem outro app nem outra conta.",
+  "Una relación visible en el teléfono del cliente.": "Uma relação visível no celular do cliente.",
+  "Historias por incorporar": "Histórias para incorporar",
+  "Foto de una persona usando Taply en un negocio local": "Foto de uma pessoa usando a Taply em um negócio local",
+  "Queremos que cada negocio local pueda reconocer a quien vuelve, activar el siguiente momento y entender qué construye una relación duradera.": "Queremos que cada negócio local possa reconhecer quem volta, ativar o próximo momento e entender o que constrói uma relação duradoura.",
 };
 
 const replacements: Array<[RegExp, string]> = [
