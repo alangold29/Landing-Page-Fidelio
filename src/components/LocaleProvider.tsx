@@ -21,6 +21,14 @@ function translateElement(element: Element) {
 }
 
 function translateTree(root: Node) {
+  if (root instanceof Text) {
+    if (!root.parentElement?.closest("script, style, code")) {
+      const translated = translateText(root.data);
+      if (translated !== root.data) root.data = translated;
+    }
+    return;
+  }
+
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   let node: Text | null;
   while ((node = walker.nextNode() as Text | null)) {
